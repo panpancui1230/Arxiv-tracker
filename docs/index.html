@@ -74,12 +74,240 @@ summary{cursor:pointer;color:var(--acc)}
   <button class="btn" onclick="__expandAll(false)">Collapse All</button>
 </div>
 
-        <span class="badge">2026-10-16 05:52</span>
+        <span class="badge">2026-10-17 05:50</span>
       </div>
     </div>
     <div class="hr"></div>
     <div>Latest digest</div>
     <div class="row"><div class="card">
+<div class="title">Evaluation Awareness Beyond English: Do LLMs Act Differently When Tested in Indic Languages?</div>
+<div class="meta-line">Authors: Trizal Garg, Sibayan Mitra, Arya Karanjkar, Advait Singh, Jagat Sesh Challa, Yash Sinha, Siddharth Mehrotra, Dhruv Kumar, Pratham Yogish Maliya</div>
+<div class="meta-line">First: 2026-10-15T17:53:33+00:00 · Latest: 2026-10-15T17:53:33+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.22333v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.22333v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Large language models (LLMs) can often tell when they are being tested. This ability, known as evaluation awareness, can lead models to act more cautiously during safety evaluations than in real use. Existing work has studied evaluation awareness almost entirely in English, although models serve users in many languages. Indic languages are spoken by over a billion people, yet evaluation awareness remains almost entirely unstudied in them. We test four instruction-tuned models from three families in five Indic languages alongside English. A set of cues varies whether the model is told that it is monitored and whether the monitoring is a safety test. Models refuse harmful requests more often when they are told that they are being tested. This increase appears in all four models and all six languages. In Indic languages, refusal of harmful requests rises by 14.4 percentage points on average. The test cue also brings Indic refusal of harmful requests level with English, but raises refusal of benign Indic requests from 6.9% to 11.3%. We release all 47,880 judged responses to support further work. These results suggest that safety evaluations in Indic languages may not reflect how models treat their everyday users.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Large language models (LLMs) can often tell when they are being tested.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">BRIDGE: Bridging Reasoning In Distillation Gap Elimination via Structure-Aware Masking</div>
+<div class="meta-line">Authors: Bowen Yu, Sheng Zhang, Binhao Wang, Yi Wen, Jingtong Gao, Bowen Liu, Zimo Zhao, Shanshan Ye, Wanyu Wang, Maolin Wang, Xiangyu Zhao</div>
+<div class="meta-line">First: 2026-02-05T05:27:11+00:00 · Latest: 2026-10-15T17:12:35+00:00</div>
+<div class="meta-line">Comments: 15 pages, 13 figures. Accepted at SDM 2026</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2602.17686v7">Abs</a> · <a href="https://arxiv.org/pdf/2602.17686v7">PDF</a> · <a href="https://github.com/Applied-Machine-Learning-Lab/SDM2026_BRIDGE">Code1</a> · <a href="https://huggingface.co/bowen0815/BRIDGE">Code2</a> · <a href="https://huggingface.co/huggingface">Code3</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Chain-of-Thought (CoT) reasoning has significantly improved LLMs&#x27; mathematical problem-solving capabilities, but distilling such capabilities into smaller models remains challenging due to the capacity mismatch between verbose teachers and compact students. Directly copying teachers&#x27; lengthy reasoning chains causes capacity overload, resulting in truncated outputs or repetitive failure. Existing remedies each sacrifice a critical property of CoT: implicit reasoning methods (e.g., compressing reasoning into hidden states) trade away interpretability and verifiability, while heuristic compression strategies (e.g., random step pruning) destroy logical integrity. To address this, we propose BRIDGE, a curriculum framework that first establishes structural understanding via masked reconstruction, then uses GRPO-based reinforcement learning to guide students in self-discovering the optimal balance between accuracy and brevity, and finally internalizes complex reasoning through teacher-guided rewriting on failure cases. On GSM8K, BRIDGE enables Qwen2.5-3B to achieve 11.29% accuracy improvement and 27.4% token reduction over the original model, outperforming instruction-tuned variants and distillation baselines. Zero-shot transfer experiments on SVAMP and MATH-500 further confirm the generalization of internalized reasoning. Our code and model checkpoints are publicly available at https://github.com/Applied-Machine-Learning-Lab/SDM2026_BRIDGE and https://huggingface.co/bowen0815/BRIDGE.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Chain-of-Thought (CoT) reasoning has significantly improved LLMs&#x27; mathematical problem-solving capabilities, but distilling such capabilities into smaller models remains challenging due to the capacity mismatch between verbose teachers and compact students.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">CART: Compatible Routing for Multimodal Continual Instruction Tuning</div>
+<div class="meta-line">Authors: Ling-Xiang Zhang, Tao Hu, Da-Wei Zhou</div>
+<div class="meta-line">First: 2026-10-15T16:11:22+00:00 · Latest: 2026-10-15T16:11:22+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.22137v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.22137v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Multimodal Large Language Models (MLLMs) achieve strong performance through instruction tuning, yet real-world applications often require them to continually acquire new capabilities from sequential tasks, i.e., Multimodal Continual Instruction Tuning (MCIT). In typical MLLMs, a projector is employed to align visual representations with the language model. However, existing methods primarily protect the language model from forgetting while continuously updating the projector across tasks. Such asymmetric adaptation can cause substantial representation drift in the projector, increasing the mismatch between the projector and language model and consequently exacerbating catastrophic forgetting. To address this issue, we propose Compatible Routing (CART), which explicitly coordinates the adaptation of the projector and language model. Specifically, CART maintains task-specific experts for both modules and combines them through weighted mixtures. CART jointly infers their weights by considering both expert relevance and cross-module compatibility, thereby promoting coordinated adaptation between the two modules. To further control model growth, we introduce relevance-guided expert consolidation, which merges experts exhibiting similar relevance profiles across samples within each module. Extensive experiments demonstrate that CART achieves state-of-the-art performance.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Multimodal Large Language Models (MLLMs) achieve strong performance through instruction tuning, yet real-world applications often require them to continually acquire new capabilities from sequential tasks, i.e., Multimodal Continual Instruction Tuning (MCIT).</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Multi-SFT: Permissively-Licensed Multilingual Instruction-Following</div>
+<div class="meta-line">Authors: Daniela Baiamonte, Kamyar Zeinalipour, Elena Fano, Stefano Simonazzi, Andrea Zugarini</div>
+<div class="meta-line">First: 2026-10-15T15:39:41+00:00 · Latest: 2026-10-15T15:39:41+00:00</div>
+<div class="meta-line">Comments: 13 pages, 7 tables</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.22086v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.22086v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Supervised fine-tuning datasets remain overwhelmingly English-centric and commercially restricted, as their content is frequently generated by proprietary models whose terms of service forbid training competing systems. We introduce Multi-SFT, a commercially permissive collection of 502,818 instruction-response pairs across five European languages, built via translation and regeneration pipelines for tasks where translation is insufficient. Human evaluation yields inter-annotator agreement of at least 0.87 across all datasets and languages. Fine-tuning nine models from three different families (EuroLLM, OLMo 2, Qwen3; 1B-32B) and evaluating them on 13 benchmarks shows that Multi-SFT alone is competitive with larger augmented mixes and official instruction-tuned releases, with decisive advantages on safety tasks.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Supervised fine-tuning datasets remain overwhelmingly English-centric and commercially restricted, as their content is frequently generated by proprietary models whose terms of service forbid training competing systems.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Pairwise AUC Optimization Needs Corrective Power: A Unified View</div>
+<div class="meta-line">Authors: Jia Chen, Zhiyong Yang, Shilong Bao, Qianqian Xu, Qingming Huang</div>
+<div class="meta-line">Venue: NeurIPS 2026</div>
+<div class="meta-line">First: 2026-10-15T12:02:54+00:00 · Latest: 2026-10-15T12:02:54+00:00</div>
+<div class="meta-line">Comments: 71 pages, including references and appendices. Accepted at NeurIPS 2026</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.21743v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.21743v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Direct pairwise AUC-surrogate training is attractive because it trains toward the ranking metric used at test time, especially under class imbalance. This creates a direct alignment between the training objective and the evaluation metric, but such metric alignment alone does not guarantee that stochastic training remains corrective. We study this gap through Corrective Power: whether pairwise mini-batch updates produce stronger and more reliable improvements for more severe positive-negative ranking errors. Our main observation is that direct pairwise training can enter regions where severe errors remain common but no longer produce useful corrective motion. In such regions, even the mini-batch noise that would normally help SGD move along the steepest severe-error correction direction can become much weaker. In this paper, we seek a theoretical explanation for this by exploring the degenerate property of the U-statistics formed from the pairwise gradients therein. Our results provide a mechanistic explanation for several empirical patterns: (a) squared-hinge loss is often an effective AUC surrogate; (b) cross-entropy warm-up can help models that enter the AUC phase from a poor starting region; and (c) parameter-efficient fine-tuning from a pretrained model can reduce that need by starting closer to a favorable ranking geometry. Experiments on 8 CV tasks and 8 NLP tasks, using ResNet50, DenseNet121, DistilBERT-base, and Qwen2.5-1.5B-Instruct, support these predictions.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Direct pairwise AUC-surrogate training is attractive because it trains toward the ranking metric used at test time, especially under class imbalance.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Abstracts or full text? Evaluating input scope and computational efficiency in biomedical lay summarization</div>
+<div class="meta-line">Authors: Egecan Çelik Evgin, İlknur Karadeniz, Olcay Taner Yıldız</div>
+<div class="meta-line">First: 2026-10-15T11:13:36+00:00 · Latest: 2026-10-15T11:13:36+00:00</div>
+<div class="meta-line">Comments: 26 pages, 2 figures</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.21690v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.21690v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Biomedical research articles are mainly written for experts and often contain terms that are difficult for the general public to understand. Automated lay summarization has become a solution to make biomedical knowledge easier for patients and the public to understand. However, generating lay summaries from full-text articles requires more computing power because the articles are long and costly to process. Fine-tuning large language models for this task also requires substantial resources. This study asks two questions: (1) whether abstracts contain enough information to produce lay summaries as good as those based on full-text articles, and (2) whether few-shot learning performs as well as task-specific fine-tuning. The study used two public biomedical lay summarization datasets and two recent models, evaluated for readability, factual consistency, semantic similarity, and runtime efficiency. Results show that abstract-based summarization performs better overall. Across both datasets and models, abstract fine-tuning is 4.70 times faster, while abstract zero- and few-shot prompting is 5.31 times faster than full-text methods. These results show that abstract-based prompting reduces runtime cost while maintaining lay summary quality.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Biomedical research articles are mainly written for experts and often contain terms that are difficult for the general public to understand.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Pairwise Difference Learning for Classification</div>
+<div class="meta-line">Authors: Mohamed Karim Belaid, Maximilian Rabus, Eyke Hüllermeier</div>
+<div class="meta-line">Venue: Discovery Science (DS 2024), Lecture Notes in Computer Science, vol. 15244, pp. 284-299, Springer (2025)</div>
+<div class="meta-line">First: 2024-06-28T16:20:22+00:00 · Latest: 2026-10-15T10:26:53+00:00</div>
+<div class="meta-line">Comments: v2: corrected the e-mail address of E. Hüllermeier and the ORCID of M.K. Belaid; added a reference to the published version. Preprint (version submitted before peer review) of the paper published in Discovery Science (DS 2024), LNCS vol. 15244, Springer</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2406.20031v2">Abs</a> · <a href="https://arxiv.org/pdf/2406.20031v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Pairwise difference learning (PDL) has recently been introduced as a new meta-learning technique for regression. Instead of learning a mapping from instances to outcomes in the standard way, the key idea is to learn a function that takes two instances as input and predicts the difference between the respective outcomes. Given a function of this kind, predictions for a query instance are derived from every training example and then averaged. This paper extends PDL toward the task of classification and proposes a meta-learning technique for inducing a PDL classifier by solving a suitably defined (binary) classification problem on a paired version of the original training data. We analyze the performance of the PDL classifier in a large-scale empirical study and find that it outperforms state-of-the-art methods in terms of prediction performance. Last but not least, we provide an easy-to-use and publicly available implementation of PDL in a Python package.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Pairwise difference learning (PDL) has recently been introduced as a new meta-learning technique for regression.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Transfer Learning in Bandits from Unknown Adaptive Policies: Problem-Dependent Lower and Upper Bounds</div>
+<div class="meta-line">Authors: Adrien Prevost, Timothee Mathieu, Waris Radji, Odalric-Ambrym Maillard</div>
+<div class="meta-line">First: 2026-10-15T09:30:13+00:00 · Latest: 2026-10-15T09:30:13+00:00</div>
+<div class="meta-line">Comments: 50 pages, 4 figures</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.21582v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.21582v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Transfer learning in stochastic multi-armed bandits is typically studied assuming that prior data forms a fixed offline dataset or is generated by a known source. In practice, historical observations come from a previous adaptive decision process whose policy is unknown. We study this setting for bounded rewards in $[0,1]$.
+  Before the online game starts, the learner receives, for each arm $k$, $N&#x27;_k$ observations drawn i.i.d.\ from an unknown distribution $ν&#x27;_k$, collected by an arbitrary and possibly data-dependent strategy, so the sample sizes $N&#x27;_k$ may be random. Source and target means satisfy $|μ_k-μ&#x27;_k|&lt;L_k$ for known constants $(L_k)_k$.
+  We derive an asymptotic problem-dependent lower bound and propose KL-UCB-Transfer, which combines online and historical data and achieves logarithmic regret with an improved leading constant whenever $μ&#x27;_a&lt;μ_1-L_a$, and recovers the classical KL-UCB guarantee otherwise. Since bounding the source-target discrepancy is often unrealistic, we relax the assumption to the one-sided condition $μ_k-μ&#x27;_k&lt;L_k$ and show that logarithmic regret can survive under misspecification, characterizing three regimes ranging from improvement to a degraded logarithmic bound to a loss of guarantee. Simulations illustrate the practical benefits of exploiting process-generated historical data.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Transfer learning in stochastic multi-armed bandits is typically studied assuming that prior data forms a fixed offline dataset or is generated by a known source.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Uncertainty Quantification in Pairwise Difference Learning for Classification</div>
+<div class="meta-line">Authors: Mohamed Karim Belaid, Maximilian Rabus, Eyke Hüllermeier</div>
+<div class="meta-line">Venue: Machine Learning 115, 12 (2026)</div>
+<div class="meta-line">First: 2026-10-15T09:15:08+00:00 · Latest: 2026-10-15T09:15:08+00:00</div>
+<div class="meta-line">Comments: 32 pages. Preprint (version submitted before peer review) of the article published in Machine Learning 115, 12 (2026)</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.21554v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.21554v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Instead of learning a mapping from instances to outcomes in the standard way, the key idea of pairwise difference learning (PDL) is to learn a function that takes two instances as input and predicts the difference between the respective outcomes. Given a function of this kind, predictions for a query instance are derived from every training example and then averaged. We propose a version of PDL for the task of classification and propose a suitable meta-learning technique for this purpose. Moreover, we address the problem of uncertainty quantification, i.e., of representing and quantifying the uncertainty of a PDL classifier&#x27;s predictions in a faithful manner. Building on recent work on the decomposition of total uncertainty into aleatoric and epistemic components, we propose different ways of extending corresponding measures to the setting of PDL, depending on how and to what extent uncertainty is represented by the underlying base learner. In large-scale empirical studies, we analyze both the predictive accuracy and the uncertainty awareness of our PDL classifier.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Instead of learning a mapping from instances to outcomes in the standard way, the key idea of pairwise difference learning (PDL) is to learn a function that takes two instances as input and predicts the difference between the respective outcomes.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Where, How, and When: Query-Guided Grounding for Video Understanding</div>
+<div class="meta-line">Authors: Yogesh Kumar</div>
+<div class="meta-line">First: 2026-10-15T07:32:57+00:00 · Latest: 2026-10-15T07:32:57+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.21422v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.21422v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Understanding video content requires reasoning at multiple levels of granularity, from identifying objects to interpreting their interactions and localizing when specific actions occur. This thesis studies three query-guided grounding tasks that answer where key objects are (object-level grounding), how they interact (relationship-level grounding), and when specific moments occur (moment-level grounding). For object-level grounding, we present QDETRv, a query-guided extension of the Detection Transformer for one-shot localization of unseen objects in videos, which combines query-context fusion, a memory module for temporal consistency, and unsupervised pretraining on synthetic object trajectories. We further propose the Temporal Object-Aware Vision Transformer (TOViT) for few-shot video object detection, which builds on a language-aligned open-set vision encoder and propagates high-confidence object features across frames. For relationship-level grounding, we introduce few-shot referring relationships in videos: given a (subject, predicate, object) query and a few support videos sharing the predicate, the entities are localized by optimizing a T-partite random field using a meta-learned relation network with query-conditioned translational embeddings, Global Semantic Aggregation, Local Localization Aggregation, and belief-propagation-based message passing. For moment-level grounding, we propose the Moment Alignment Transformer (MATR) for video-to-video moment retrieval, which uses dual-stage Dynamic Time Warping for pre- and post-fusion alignment, learnable queries for boundary prediction, and self-supervised pretraining with temporal augmentations; MATR also extends to text-to-video moment retrieval with performance comparable to, or better than, the state of the art. These contributions advance query-guided video understanding across spatial, relational, and temporal grounding.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Understanding video content requires reasoning at multiple levels of granularity, from identifying objects to interpreting their interactions and localizing when specific actions occur.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">What Makes Good Instruction-Tuning Data? An In-Context Learning Perspective</div>
+<div class="meta-line">Authors: Guangzeng Han, Xiaolei Huang</div>
+<div class="meta-line">Venue: ACL 2026</div>
+<div class="meta-line">First: 2026-04-28T02:09:28+00:00 · Latest: 2026-10-15T04:18:21+00:00</div>
+<div class="meta-line">Comments: ACL 2026, main conference</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2604.25132v2">Abs</a> · <a href="https://arxiv.org/pdf/2604.25132v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Instruction-tuning datasets often contain substantial redundancy and low-quality samples, necessitating effective data selection methods. We propose an instruction data selection framework based on weighted in-context influence (wICI), which measures how effectively each candidate example reduces instruction-following difficulty for semantically related peers. Through systematic experiments, we address three key questions: what constitutes effective instruction tuning data from an in-context perspective, whether sample difficulty correlates with in-context influence, and how in-context influence translates to instruction tuning effectiveness. Experiments across multiple models and benchmarks demonstrate that our method consistently outperforms existing baselines under constrained data budgets, while empirically showing that sample difficulty negatively correlates with in-context influence.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Instruction-tuning datasets often contain substantial redundancy and low-quality samples, necessitating effective data selection methods.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Clean Data Can Still Carry Backdoors: Support-Persistent Backdoors for Model Reuse</div>
+<div class="meta-line">Authors: Junhoo Lee, Baekseung Kim, Seungyeon Kim, Nojun Kwak</div>
+<div class="meta-line">Venue: NeurIPS 2026</div>
+<div class="meta-line">First: 2026-10-15T04:04:19+00:00 · Latest: 2026-10-15T04:04:19+00:00</div>
+<div class="meta-line">Comments: Accepted to NeurIPS 2026</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.21208v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.21208v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Traditional backdoor attacks inject artificial trigger patterns into training data, causing models to misclassify triggered inputs while maintaining normal behavior on clean samples. Since these artificial triggers are absent in clean datasets, standard knowledge distillation (KD) typically eliminates them, leading to the common belief that KD serves as an effective purification defense. In this paper, we propose DAR (Discover-and-Relabel), a support-persistent backdoor method that retains its behavior even after clean-data distillation. DAR identifies naturally abundant patterns in low-dimensional feature subspaces using subspace clustering and applies label-only poisoning to samples that inherently satisfy the discovered rule. At test time, the backdoor is activated by locally modifying the corresponding subspace of the target images. By instantiating spatial and frequency operators, DAR achieves attack accuracy comparable to state-of-the-art backdoor attacks in ImageNet classification and CLIP-based prompt tuning. Notably, DAR keeps attack success above 96% after clean KD and remains defense-resistant in practice. Project page: https://junhoo.me/backdoor</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Traditional backdoor attacks inject artificial trigger patterns into training data, causing models to misclassify triggered inputs while maintaining normal behavior on clean samples.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Poisoning the corpora of protein design systems during pre-training and retrieval</div>
+<div class="meta-line">Authors: Charalampos Koilakos, Kimon-Antonios Provatas, Michail Patsakis, Candace SY Chan, Georgios A. Pavlopoulos, Ilias Georgakopoulos-Soares</div>
+<div class="meta-line">First: 2026-10-15T04:00:17+00:00 · Latest: 2026-10-15T04:00:17+00:00</div>
+<div class="meta-line">Comments: double page format, 6 figures</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.21200v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.21200v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Protein foundation models increasingly support the generation of novel biological sequences, yet their reliance on large public datasets creates opportunities for adversarial manipulation of the material they learn from and retrieve. We investigate two data-only poisoning attacks against protein design systems, targeting the pre-training corpus of autoregressive protein language models and the retrieval corpus of a text-guided protein generator. For the first, we pre-trained ProtGPT2 and ProGen2 variants of 300 million parameters, introducing poisoned protein sequences containing one of two triggers followed by one of three payloads. Across all poisoned runs, both architectures acquired highly reliable trigger-dependent generation under uniform and ramped poisoning schedules. Under ramped exposure, the earliest majority activation occurred after only 200 contaminated examples, while for the uniform schedule earliest activation occurred around 5000 poisoned samples. For the second attack, we inserted records into a retrieval corpus system without modifying its weights or decoding procedure. A single query-aware record captured a top-16 retrieval position for 58\% of templated requests and 97\% of free-text requests. Conditional on successful poisoned retrieval, 62\% of requests produced altered sequences, while 19-21% acquired the inserted domain by profile-HMM homology. A universal query-unaware attack using 1,500 records also achieved substantial retrieval capture and domain transfer. Together, these findings demonstrate that adversarial protein sequence contributions can establish persistent, sequence-specific behaviour during pre-training or redirect protein generation at inference, while leaving ordinary model behaviour largely preserved. Our work establishes the integrity and biological provenance of protein sequence data as critical safeguards for generative protein design systems.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Protein foundation models increasingly support the generation of novel biological sequences, yet their reliance on large public datasets creates opportunities for adversarial manipulation of the material they learn from and retrieve.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Resisting Harmful Instructions through Training-Free Weight Editing</div>
+<div class="meta-line">Authors: Ali Ebrahimpour-Boroojeny, Xiaocong Yang, Samuel Schapiro, Zahra Borhani, Francisco R. Ortega, Yujia Zheng, ChengXiang Zhai</div>
+<div class="meta-line">First: 2026-10-15T03:47:15+00:00 · Latest: 2026-10-15T03:47:15+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.21189v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.21189v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Instruction-following language models can comply with requests that conflict with intended behaviors and safety alignment. We introduce a training-free weight-editing approach for reducing compliance with targeted undesirable instructions. Our method needs only forward passes on a small set of prompt pairs per target behavior, and because the edit is stored in the model&#x27;s weights, changing or deleting instructions in the prompt cannot undo the weight modification. We evaluate the approach on two target harmful behaviors across five instruction-tuned models: instructed falsehood and instructed sexism. On two instructed-lying benchmarks, it improves mean honest response rates by 6.2 and 4.6 percentage points over the strongest alternative, significantly on three of the five models and within noise on the other two. In a controlled study of seven prompt formats, it maintains higher honest-response rates than single-layer activation steering when orders to lie arrive in single-turn formats not used to construct the edit. For instructed sexism, it reduces the mean sexist-response rate from 57.9% to 24.3%; combining the edit with a fairness prompt reduces it further to 11.9%. These results establish our contrast-based weight editing approach as an effective training-free intervention in two distinct behavioral domains, supporting its use both independently and alongside prompt-based safeguards.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Instruction-following language models can comply with requests that conflict with intended behaviors and safety alignment.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Learning When to Withdraw: Curriculum Coverage and Rule-Specific Failures in Fine-Tuned Language Agents</div>
+<div class="meta-line">Authors: Mohamed Abouzahra</div>
+<div class="meta-line">First: 2026-10-15T00:38:39+00:00 · Latest: 2026-10-15T00:38:39+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.21045v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.21045v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Tool-using language agents must revise prepared actions when evidence changes or authority is revoked. Selective withdrawal means suspending affected actions, preserving supported work, and resuming only after sufficient repair. We study supervised fine-tuning in NAQD-Env, a synthetic environment with explicit dependencies and a deterministic reference policy. Four LoRA checkpoints of Qwen2.5-3B-Instruct compare an original curriculum with an enriched one, the latter under three system-prompt framings with identical views and targets. Three instruction-tuned baselines and all four checkpoints are evaluated under three inference prompts on fresh validation cases, held-out dependency families, and held-out structural combinations. Under the naqd prompt, SFT checkpoints reach decision agreement of 0.77-0.92 and withdrawal recall of 0.46-0.86, versus 0.45-0.63 and at most 0.06 for the baselines. Rule-level diagnostics qualify these gains. The original-curriculum checkpoint wrongly withdraws 26 of 34 actions with surviving alternative support; enriched checkpoints withdraw 0-1. Conversely, all SFT checkpoints narrow prohibited combinations less often than the 7B and 8B baselines, a case absent from both curricula. Delegation results show more withdrawal but poorer preservation of independently authorized actions, and all four checkpoints omit valid event reports. Framing contrasts vary across metrics and splits and do not establish a reproducible advantage or equivalence. One training run per arm, jointly changed curriculum properties, prior evaluation exposure, and baseline-SFT quantization differences limit causal attribution. The contribution is a method for detecting rule-specific regressions that aggregate accuracy can conceal, not evidence that fine-tuning alone ensures agent safety.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Tool-using language agents must revise prepared actions when evidence changes or authority is revoked.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Formal Bayesian Transfer Learning via the Total Risk Prior</div>
+<div class="meta-line">Authors: Nathan Wycoff, Ali Arab, Lisa O. Singh</div>
+<div class="meta-line">First: 2025-07-31T17:55:16+00:00 · Latest: 2026-10-14T20:26:16+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2507.23768v3">Abs</a> · <a href="https://arxiv.org/pdf/2507.23768v3">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Existing methods for transfer learning struggle to deal with situations where the source datasets are limited and not guaranteed to be well-aligned with the target dataset. A typical strategy is to use the empirical loss minimizer on the source data as a prior mean for the target parameters. We propose using a risk minimizer conditional on source parameters instead. This allows us to construct a joint posterior for all parameters from the source and target datasets. As a consequence, we benefit from full Bayesian uncertainty quantification and can perform model averaging via Gibbs sampling over indicator variables governing the inclusion of each source dataset. We show how a particular instantiation of our prior leads to a Bayesian Lasso in a transformed coordinate system and describe connections between the Maximum a Posteriori estimate associated with our approach and the Trans-Lasso method. We find that the MAP estimator MSE-dominates the Trans-Lasso in the normal means setting when there is no regularization on the source datasets. Finally, we perform numerical experiments finding that our approach provides superior predictive performance relative to frequentist and Bayesian baselines on a genetics application, particularly when the source data are limited.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Existing methods for transfer learning struggle to deal with situations where the source datasets are limited and not guaranteed to be well-aligned with the target dataset.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">OTel: Open Telco AI Datasets, Benchmarks, and Models</div>
+<div class="meta-line">Authors: Farbod Tavakkoli, Gregory Diamos, Kenneth Church, Roderic Paulk, Jorden Terrazas, David Kanter, Mark Austin, Imtiaz Karim, Syed Ali Raza Zaidi, Lina Bariah, Merouane Abdelkader Debbah, Ali Maatouk, Louis Powell, Nikolaos Vasiloglou, Ashish Vaswani, Somanshu Singla, Adarsh Chaluvaraju</div>
+<div class="meta-line">First: 2026-10-06T05:03:29+00:00 · Latest: 2026-10-14T20:19:14+00:00</div>
+<div class="meta-line">Comments: Pre-print</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.07766v4">Abs</a> · <a href="https://arxiv.org/pdf/2610.07766v4">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">We present Open Telco (OTel), an open telecom AI resource that releases derived telecom datasets for retrieval, reranking, instruction tuning, and safety/abstention, together with 30 full-parameter post-trained baselines spanning 10 embedding models, 3 rerankers, and 17 language models. The community has already engaged substantially with the resource: as of May 3, 2026, the released models have been downloaded over 16 million times and the project has received 157+ pieces of media coverage worldwide. Building on prior open telecom datasets and benchmarks, OTel provides documented telecom data sources, held-out evaluation partitions, trained embedding models, rerankers, context-grounded LLMs, and safety/abstention data in one unified resource. Each baseline starts from an open-weight model and is post-trained on OTel-derived data using an open training recipe, then evaluated on held-out OTel evaluation partitions. OTel post-training improves performance across all three model families: embedding retrieval reaches 93.1% NDCG@10, reranking reaches 0.947 MRR@10, and language-model correctness reaches 87.8%. We release OTel as a reproducible starting point and invite the community to expand the data, improve embedding and reranking models, and build stronger context-grounded telecom LLMs.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">We present Open Telco (OTel), an open telecom AI resource that releases derived telecom datasets for retrieval, reranking, instruction tuning, and safety/abstention, together with 30 full-parameter post-trained baselines spanning 10 embedding models, 3 rerankers, and 17 language models.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Soft Sensor for Bottom-Hole Pressure Estimation in Petroleum Wells Using Long Short-Term Memory and Transfer Learning</div>
+<div class="meta-line">Authors: M. A. Fernandes, E. Gildin, M. A. Sampaio</div>
+<div class="meta-line">First: 2026-02-03T16:56:21+00:00 · Latest: 2026-10-14T19:44:18+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2602.03737v2">Abs</a> · <a href="https://arxiv.org/pdf/2602.03737v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Monitoring bottom-hole variables in petroleum wells is essential for production optimization, safety, and emissions reduction. Permanent Downhole Gauges (PDGs) provide real-time pressure data but face reliability and cost issues. We propose a machine learning-based soft sensor to estimate flowing Bottom-Hole Pressure (BHP) using wellhead and topside measurements. A Long Short-Term Memory (LSTM) model is introduced and compared with Multi-Layer Perceptron (MLP) and Ridge Regression. We also pioneer Transfer Learning for adapting models across operational environments. Tested on real offshore datasets from Brazil&#x27;s Pre-salt basin, the methodology achieved Mean Absolute Percentage Error (MAPE) consistently below 2\%, outperforming benchmarks. This work offers a cost-effective, accurate alternative to physical sensors, with broad applicability across diverse reservoir and flow conditions.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Monitoring bottom-hole variables in petroleum wells is essential for production optimization, safety, and emissions reduction.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Wolof-Adapted Industry-Ready Open-Weight Language Models</div>
+<div class="meta-line">Authors: Gwénolé Lecorvé, Delphine Charlet, Pierre Adam, Floriane Behanzin, Lionel Delphin-Poulat, Johannes Heinecke, Géraldine Damnati, Pelin Kaytmaz, Nourredine Khaous, Charbel Kindji, Meriam Maadi, Abdoulaye Mbaye, Claire Perroux, Ismaël Rousseau, Papa Séga Wadé, Gilles Xiberras, Olivier Zhang, Malek Zitouni</div>
+<div class="meta-line">First: 2026-10-14T19:10:23+00:00 · Latest: 2026-10-14T19:10:23+00:00</div>
+<div class="meta-line">Comments: 6 + 47 pages (main + appendices), 27 tables, 1 figure</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.20824v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.20824v1">PDF</a> · <a href="https://huggingface.co/collections/Orange/wolof-lm">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Wolof is spoken by 23M people, mostly in Senegal, but remains weakly supported by open-weight language models, while API models raise cost, governance, and sovereignty constraints for local deployments. In this paper, we present 0.6B-14B open-weight models adapted to Wolof through instruction tuning, preference alignment, and model merging. After presenting the pipeline and data, extensive experiments on 63~public and in-house tasks show good performance on Wolof understanding and generation while remaining effective on other languages and cross-lingual skills, with the 8B and 14B models being particularly competitive with substantially larger commercial systems. The models are currently being evaluated in internal customer-care pilots and are publicly available at https://huggingface.co/collections/Orange/wolof-lm .</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Wolof is spoken by 23M people, mostly in Senegal, but remains weakly supported by open-weight language models, while API models raise cost, governance, and sovereignty constraints for local deployments.</div>
+</details>
+</div>
+<div class="card">
 <div class="title">RRM-GPT: A Framework and Vision for Radio Resource Management Foundation Models</div>
 <div class="meta-line">Authors: Ahmed Aboulfotouh, Akram Bin Sediq, Koosha Pourtahmasi Roshandeh, Omar Mashaal, Ahmad M. Nagib, Jale Sadreddini, Hatem Abou-Zeid</div>
 <div class="meta-line">First: 2026-10-03T05:04:46+00:00 · Latest: 2026-10-14T16:43:17+00:00</div>
@@ -88,6 +316,19 @@ summary{cursor:pointer;color:var(--acc)}
 <div class="mono">Learning-based models for radio resource management (RRM) are typically built for a single function and deployment, so each new setting repeats the development pipeline. RRM decisions, however, share a common structure: each is assembled from interdependent fields, defined by the standard, whose values are selected in view of the network state. We propose RRM-GPT, an autoregressive framework for RRM foundation models that generate these decisions as a language model generates text. An encoder maps heterogeneous network observations into a common token representation, and a decoder emits the decision one field at a time, each conditioned on the network state and the fields already committed. Pretraining on unannotated network logs teaches the model what makes a decision valid and how controllers choose among valid decisions; post-training then adapts it to deployment-specific operator objectives through imitation or reinforcement learning. The framework targets two forms of reuse: a function-specific model reused across deployments, and a model shared across RRM functions that generates their interdependent decisions as one sequence. In a 5G New Radio (NR) case study, we demonstrate that a single model generates complete scheduling grants spanning user selection, timing, link adaptation, resource allocation, and control signaling. The model captures dependencies among grant fields and transfers learned behavior to an unseen scenario without adaptation.</div></details>
 <details class="detail"><summary>Summary / 总结</summary>
 <div class="mono">Learning-based models for radio resource management (RRM) are typically built for a single function and deployment, so each new setting repeats the development pipeline.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Causal Syntax Circuits in CodeLMs: Budget and Probe Decide What Looks Localised</div>
+<div class="meta-line">Authors: Harsh Kumar, Tanmay Shailesh Joshi, Rahul Maity, Anusa Saha</div>
+<div class="meta-line">Venue: NeurIPS 2026</div>
+<div class="meta-line">First: 2026-10-14T16:31:03+00:00 · Latest: 2026-10-14T16:31:03+00:00</div>
+<div class="meta-line">Comments: Accepted at the NeurIPS 2026 Workshop on Linguistic Principles for Foundation Models (LP4FM). All four authors contributed equally</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.20683v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.20683v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Code models write Python when the prompt does not say which language to use. We ask a mechanistic question about that habit: is it produced by a small, findable group of components inside the model? We run one pipeline---mean ablation, activation patching, greedy circuit extraction, a random-control significance test, and activation steering---over 55 model-language settings spanning ten open code models (five base and five instruction-tuned), three target languages (Rust, C#, PHP), two prompt suites, and two component budgets. We report five findings. First, the preference is large, grows with model size, and survives instruction tuning: it is larger on every instruction-tuned checkpoint than on its base version, by 12% on average. Second, its measured size is mostly a property of the probe; replacing our aligned prompts with XLCoST parallel functions takes the same measurement on the same models from about 1.6 to about 0.01. Third, whether the preference looks localised depends on how many components the search may keep: with a budget of 12, 1 of 15 settings yields a circuit that beats size-matched random controls after multiple-comparison correction, and with a budget of 40, 6 of 15 do. Fourth, interventions that a smaller-budget study reports as uniformly failing do sometimes succeed: patching makes a Python prompt prefer target syntax in 2 of 45 settings, and steering changes the most likely next token in 9 of 45. Fifth, every circuit whose effect is significant but points away from the target language comes from a setting where circuit extraction failed, which makes such results a diagnostic rather than a phenomenon. The practical lesson is that a claim about whether a behaviour is localised can turn on analysis choices that papers rarely report. We release the full grid so those choices can be varied.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Code models write Python when the prompt does not say which language to use.</div>
 </details>
 </div>
 <div class="card">
@@ -197,246 +438,10 @@ summary{cursor:pointer;color:var(--acc)}
 <details class="detail"><summary>Summary / 总结</summary>
 <div class="mono">We propose and test the LLM Brain Rot Hypothesis: continual exposure to junk web text induces lasting cognitive decline in large language models (LLMs).</div>
 </details>
-</div>
-<div class="card">
-<div class="title">ListQA: A Benchmark for Evaluating List-Formatted Factual Knowledge Retrieval in Large Language Models</div>
-<div class="meta-line">Authors: Mayank Kulkarni, Rakesh Vaideeswaran</div>
-<div class="meta-line">Venue: NeurIPS 2026</div>
-<div class="meta-line">First: 2026-10-13T20:30:08+00:00 · Latest: 2026-10-13T20:30:08+00:00</div>
-<div class="meta-line">Comments: Accepted at NeurIPS 2026, Evaluations and Datasets Track. Project Page: https://listqa.github.io</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.19165v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.19165v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a> · <a href="https://listqa.github.io">Project1</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Many real-world questions demand not a single fact but an organized collection of them, yet existing factual knowledge benchmarks almost exclusively target single answer retrieval. We introduce ListQA, a benchmark of 9,045 human-curated, cross-validated questions (audited error rate of 1.7%) that require LLMs to recall multiple facts and compose them into structured lists of 3-10 elements. Questions range from flat lists (&quot;Which NCAA teams went undefeated between 2000 and 2024?&quot;) to hierarchical lists with sub-attributes (&quot;...and what was their record and result?&quot;), spanning eight categories across 60+ countries. An evergreen design (explicit temporal constraints or historically immutable facts) keeps ground truth valid without periodic updates. For evaluation, we frame element matching as a linear sum assignment problem: optimal bipartite matching paired with LLM-based semantic grading jointly captures factual accuracy, hallucination, and format compliance. We benchmark 34 models (8 families, 42 configurations across standard and thinking enabled inference) and find: the best standard-inference model scores below 37% LLM-Judge-F1, multi-faceted questions are harder across the board, and providing the source Wikipedia page lifts scores dramatically, confirming that models can organize facts but struggle to retrieve them from parameters alone. Extended analyses cover base vs. instruction-tuned checkpoints and token efficiency. We release the dataset and evaluation code.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Many real-world questions demand not a single fact but an organized collection of them, yet existing factual knowledge benchmarks almost exclusively target single answer retrieval.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">ProTok: Unified Protein Tokenization via Modular Multi-Codebook Quantization</div>
-<div class="meta-line">Authors: Romain Hardy, Xiaoman Zhang, Pranav Rajpurkar</div>
-<div class="meta-line">First: 2026-10-13T14:43:03+00:00 · Latest: 2026-10-13T14:43:03+00:00</div>
-<div class="meta-line">Comments: 22 pages, 2 figures, 10 tables</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.18481v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.18481v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Protein sequence, structure, and functional annotations each capture complementary aspects of protein biology, yet existing tokenizers encode each modality independently, limiting the expressiveness of discrete protein representations. We present ProTok, a unified protein tokenizer that maps all three modalities into a modular discrete vocabulary via product quantization with per-modality codebook groups and modality dropout. A single ProTok checkpoint supports flexible inference from any modality subset without retraining. On seven StructTokenBench benchmarks spanning 14 tasks and 28 test splits, ProTok achieves an average rank of 1.4 across all structure-only tokenizers, placing first on 21 splits and among the top two on 27 of the 28. These gains come without sacrificing reconstruction: ProTok&#x27;s tokens reach 0.939 lDDT on CATH 4.2, showing that multi-codebook quantization and multi-modal training yield tokens that are both reconstructable and informative. ProTok&#x27;s structure tokens further lead all baseline structure tokenizers on zero-shot functional retrieval across CATH, Enzyme Commission, and Gene Ontology label hierarchies. The vocabulary also supports generation: a compact language model trained from scratch over ProTok tokens jointly generates backbone and sequence, with 52% of sampled backbones designable versus 21% for a parameter-matched GeoBPE baseline. ProTok shows that structure, sequence, and function can share one discrete vocabulary, motivating protein language models that reason over a unified token stream.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Protein sequence, structure, and functional annotations each capture complementary aspects of protein biology, yet existing tokenizers encode each modality independently, limiting the expressiveness of discrete protein representations.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Not All Drift Is a Mechanism: Tracing Prompt Adaptation in LLMs</div>
-<div class="meta-line">Authors: Mikhail Aleksandrov, Nail Bashirov, Maksim Ivanov, Andrew Tsukanov, Timofey Karyagin, Alexander Miasnikov, Gleb Molodtsov, Valentin Samokhin, Aleksandr Beznosikov</div>
-<div class="meta-line">First: 2026-10-13T13:52:52+00:00 · Latest: 2026-10-13T13:52:52+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.18412v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.18412v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Prompt-based adaptation offers several ways to specialize a frozen language model, ranging from natural-language prompt optimization to learned continuous prompts. These methods are usually compared through downstream performance, although similar outputs need not arise from similar internal computations. We study how discrete prompt optimization, prompt tuning, and prefix tuning alter the processing of dense and mixture-of-experts language models. Our analysis shows that the location of the adaptation predicts how task information is carried to the output: optimized text primarily changes response construction, input-level prompts write their influence into content representations, and layer-wise prefixes maintain direct control through attention. In MoE models, these differences further induce distinct expert-routing patterns. At the same time, common representation-level measurements respond strongly to generic context changes and do not reliably distinguish useful adaptations from matched placebos. We argue that understanding prompt adaptation requires separating representation drift from the part of that drift that is aligned with, and causally used by, the model&#x27;s task computation. This perspective provides practical guidance for selecting, evaluating, and interpreting prompt adaptation methods.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Prompt-based adaptation offers several ways to specialize a frozen language model, ranging from natural-language prompt optimization to learned continuous prompts.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Token Utility Is Selection-Conditioned: Coupled Selection of Prompt Context and Response Supervision for Instruction Tuning</div>
-<div class="meta-line">Authors: Can Wu, Xinrui Chen, Ou Wu, Yi Du</div>
-<div class="meta-line">First: 2026-09-19T10:46:58+00:00 · Latest: 2026-10-13T13:16:31+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2609.22943v2">Abs</a> · <a href="https://arxiv.org/pdf/2609.22943v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Token selection for instruction tuning is coupled: supervision utility depends on retained context, and vice versa. Existing methods largely optimize prompt compression or response supervision separately. Combining selectors can value supervision using removed context, or context using excluded supervision, creating selection-state mismatch. BRIDGE (Budgeted Response-Prompt Interaction via Directional Gradient-guided Efficient Token Selection) models selection-conditioned token utility through a shared validation-directed surrogate objective. BRIDGE routes response utility to supporting prompt tokens through attention, then alternates budgeted selection to revalue each side under the other&#x27;s retained subset. Updates reuse precomputed interactions without repeated model scoring, while structure-aware projection promotes coherent supervision spans. Across three model families and three task domains, BRIDGE performs best overall among evaluated selection methods. Its MATH advantage over independent selection grows with compression, reaching 1.66 percentage points on Llama-3.2-3B.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Token selection for instruction tuning is coupled: supervision utility depends on retained context, and vice versa.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">OctoLong: Mid-Training On Cross-Repository Code Contexts Enhances Long-Context Modeling</div>
-<div class="meta-line">Authors: Indraneil Paul, Falko Helm, Goran Glavaš, Iryna Gurevych</div>
-<div class="meta-line">First: 2026-08-05T17:58:15+00:00 · Latest: 2026-10-13T12:47:27+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2608.05141v2">Abs</a> · <a href="https://arxiv.org/pdf/2608.05141v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows. However, existing long-context corpora are dominated by books, academic articles, and code repositories, which are finite and often lack long-distance dependencies. In this work, we introduce OctoLong, a context-engineering pipeline that instruments an AST parser, a language server backend, and a package manager to recursively retrieve code references, enabling the curation of dependency-rich code contexts up to millions of tokens long. We then train OctoLong-Instruct, a suite of capable long-context open LMs, derived from base models ranging in size from 600M to 14B parameters, via context-extension mid-training on a approx 50B-token mixture containing approx 6.2B tokens of OctoLong code contexts, followed by approx 10B tokens of instruction tuning. Our ablations and experimental evaluations against 18 strong long-context open-weight LMs show that supplanting just 12% of conventional context-extension corpora with OctoLong data yields substantial gains in long-range retrieval, long-term state tracking, repository-level code understanding, and downstream agentic tasks, while also enhancing API usage in regular coding scenarios.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Context lengths of language models (LMs) have dramatically increased, driven by the demands for in-context learning, self-improvement, and long-horizon agentic workflows.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">FRACTION: Fraud Explanation Generation via Agentic Graph Context Navigation</div>
-<div class="meta-line">Authors: Cecelia Soh, Jun Hu, Yuan Li, Cheng Chen, Hui Liu, Yanjia Zhu, Hao He, Bryan Hooi, Bingsheng He</div>
-<div class="meta-line">First: 2026-10-13T09:16:24+00:00 · Latest: 2026-10-13T09:16:24+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.18023v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.18023v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Graph fraud explanation generation emerges as an important task, which requires jointly leveraging graph structure and content information to produce human-readable explanations for a given risk label. An intuitive approach is to adapt existing graph-enhanced large language models (LLMs), which inject graph structure into LLMs via graph-conditioned instruction tuning or structure-aware embeddings. However, existing methods face two key challenges in graph fraud explanation generation: a lack of evaluation protocols tailored to explanation quality, and a mismatch between the granularity of graph information they provide and what explanation generation requires. In this paper, we propose FRaud Explanation Generation via Agentic Graph Context NavigaTION (FRACTION), a framework for graph fraud explanation generation. To evaluate explanation quality, we introduce a task-specific rubric that assesses faithfulness, graph grounding, helpfulness, consistency, and conciseness, and validate it against human judgments. To focus on fine-grained details of relevant neighbors without reading the entire neighborhood, we equip a language model with graph tools that progressively disclose neighbor records. To train our graph agent, we propose a rubric-guided trajectory distillation strategy through which the agent learns both tool-use behavior and structured explanation generation. Experimental results on three fraud datasets demonstrate consistent improvements over state-of-the-art baselines under a human-aligned rubric.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Graph fraud explanation generation emerges as an important task, which requires jointly leveraging graph structure and content information to produce human-readable explanations for a given risk label.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Task Competence Is Not Instruction Following: Evaluating Instruction-Conflicting Behavior in Small Language Models</div>
-<div class="meta-line">Authors: Mahdiyeh Farajidizaji, Vatsal Raina</div>
-<div class="meta-line">First: 2026-07-21T22:24:18+00:00 · Latest: 2026-10-13T07:56:33+00:00</div>
-<div class="meta-line">Comments: 12 pages, 4 figures, 8 tables</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2607.19608v2">Abs</a> · <a href="https://arxiv.org/pdf/2607.19608v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Instruction tuning is meant to make language models follow user requests, yet it is unclear whether small models comply when an instruction conflicts with their usual task behavior. We study this across three tasks - multiple-choice question answering (MCQA), sentiment classification, and mathematical question answering - by pairing a standard instruction with a conflicting non-standard one (select an incorrect option, output the opposite sentiment, or return twice the answer). This cross-task design allows us to test whether resistance to conflicting instructions is tied to specific task characteristics or reflects a broader behavioral tendency. As all predictions are scored against the original ground truth, a model that ignores the non-standard instruction still appears accurate. Using standard accuracy, non-standard accuracy, and an Instruction-Following Failure Rate (IFFR), we evaluate instruction-tuned Qwen models across sizes. Both standard accuracy and instruction following generally improve with scale, although the pattern is not consistent across all tasks and datasets. Small models stay competent yet routinely ignore the non-standard instruction, while larger models show a clear gap between the two settings. These findings suggest that gains in task capability do not automatically provide reliable control over model behavior. Task competence and instruction following are therefore distinct abilities, and reporting only standard accuracy hides instruction-following failures.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Instruction tuning is meant to make language models follow user requests, yet it is unclear whether small models comply when an instruction conflicts with their usual task behavior.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Cross-Lingual Transfer of Evil Vectors Is Directionally Asymmetric</div>
-<div class="meta-line">Authors: Juann Kim, Minku Kang</div>
-<div class="meta-line">Venue: EMNLP 2026</div>
-<div class="meta-line">First: 2026-10-13T07:36:59+00:00 · Latest: 2026-10-13T07:36:59+00:00</div>
-<div class="meta-line">Comments: Accepted to the Workshop on Multilingual Representation Learning (MRL) at EMNLP 2026</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.17880v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.17880v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Persona vectors are linear directions in the residual-stream activations of LLMs that encode behavioral traits and enable fine-grained control over model behavior. Among them, the evil persona vector is particularly relevant to understanding harmful behavior, jailbreak vulnerabilities, and the unlearning of harmful knowledge. Yet whether this vector reflects a genuinely cross-lingual concept, rather than an artifact of its extraction language, remains untested. We conduct a systematic evil-vector transfer study across two high-resource languages (English, Spanish) and two low-resource languages (Swahili, Telugu) on four open-source instruction-tuned LLMs, and find that transfer is directionally asymmetric. Evil vectors are harder to obtain reliably from low-resource languages, and the resulting vectors are largely ineffective at steering, even within their own language. In contrast, vectors extracted from high-resource languages transfer effectively to low-resource inputs while largely preserving general knowledge, as measured by MMLU. Geometric analysis further supports this pattern: evil vectors from the two high-resource languages are closely aligned, whereas low-resource vectors align only weakly with this shared direction. These results suggest that a shared cross-lingual evil direction exists and, once reliably extracted from a high-resource language, can be reused to steer behavior in low-resource languages without additional per-language data collection.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Persona vectors are linear directions in the residual-stream activations of LLMs that encode behavioral traits and enable fine-grained control over model behavior.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Confine to the Task, Anchor the Rest: Concept-Guided Retention Regularizer for Parameter-Efficient Fine-Tuning</div>
-<div class="meta-line">Authors: Ibna Kowsar, Ivan Medri, Fanyu Meng, Xin Liu</div>
-<div class="meta-line">First: 2026-10-13T04:40:12+00:00 · Latest: 2026-10-13T04:40:12+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.17713v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.17713v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Parameter-efficient fine-tuning (PEFT) has been widely used, yet the adapted model suffers catastrophic forgetting of pre-trained knowledge. While most existing work hardens the adapter by constraining where the weight update may lie, we note that constraining this weight channel does not constrain the activation channel. In this paper, we propose Concept-Guided Retention (CGR), a plug-and-play regularizer that constrains both for any PEFT base. CGR reads a frozen sparse autoencoder (SAE) and treats two disjoint concept sets differently. It softly confines the update to the task-concept subspace (via weight channel), and anchors a selected set of general-purpose concepts to the frozen model (via activation channel). We also provide anchor value bounds based on weight updates to understand how they interact, and show that both terms are necessary. On a CLIP vision panel, CGR significantly improves retention at comparable accuracy for every base, and the same pattern holds for world-knowledge retention under Llama-3.1-8B instruction tuning. Because the protected directions are named SAE concepts, CGR remains inspectable and controllable.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Parameter-efficient fine-tuning (PEFT) has been widely used, yet the adapted model suffers catastrophic forgetting of pre-trained knowledge.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Designing Protein Structures from Natural Language</div>
-<div class="meta-line">Authors: Joseph Lee, Yanjing Li, Bo Qiang, Gregory Lau, Allyson Ettinger, Noah A. Smith, Rory Donovan-Maiye, David Baker, Hanna Hajishirzi, Pang Wei Koh</div>
-<div class="meta-line">First: 2026-10-09T17:51:55+00:00 · Latest: 2026-10-13T04:11:41+00:00</div>
-<div class="meta-line">Comments: 54 pages, 9 figures. Code, data, and model weights: https://github.com/jleechung/prompteina</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.13917v2">Abs</a> · <a href="https://arxiv.org/pdf/2610.13917v2">PDF</a> · <a href="https://github.com/jleechung/prompteina">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">A central challenge in de novo protein design is generating proteins with desired structural and functional properties. Existing design models typically require a dedicated input representation for each property, limiting the design objectives they support. We develop Prompteina, the first all-atom structure generation model that supports new and broader design objectives specified in natural language, analogous to text-to-image generation. To train Prompteina, we construct Prompteina-Data, a paired text--protein structure dataset of 1.8M structures and 50M+ captions describing global and residue-specific structural and functional properties. We adapt Proteina-Complexa, a pretrained structure generation model, through text-conditioned pretraining and finetuning that aligns residues with their corresponding text. Prompteina outperforms baselines on 15 of 18 structural properties and generates proteins that more closely match descriptions of their intended functions. In binder design, it leads baselines on at least 13 of 20 targets and improves interface confidence by 14% over the strongest baseline. With iterative in silico feedback, Prompteina&#x27;s gain over non-iterative generation is 57% larger than the next-best baseline on the hardest targets. Finally, we experimentally validate Prompteina designs against GM2A, a target with no reported de novo binders. We identify nine binders, with the strongest at an apparent $K_{\mathrm{D}}$ of 107 nM. These results establish natural language as an effective and powerful conditioning interface for protein structure generation.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">A central challenge in de novo protein design is generating proteins with desired structural and functional properties.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">From Associations to Activations: Comparing Behavioral and Hidden-State Semantic Geometry in LLMs</div>
-<div class="meta-line">Authors: Louis Schiekiera, Max Zimmer, Christophe Roux, Sebastian Pokutta, Fritz Günther</div>
-<div class="meta-line">Venue: ICML 2026</div>
-<div class="meta-line">First: 2026-01-31T09:50:55+00:00 · Latest: 2026-10-12T22:47:25+00:00</div>
-<div class="meta-line">Comments: Published at the 43rd International Conference on Machine Learning (ICML 2026), Seoul, South Korea. 27 pages, 16 figures, 6 tables. Code: https://github.com/schiekiera/llm-association-geometry. Data: https://huggingface.co/datasets/schiekiera/llm-association-geometry</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2602.00628v3">Abs</a> · <a href="https://arxiv.org/pdf/2602.00628v3">PDF</a> · <a href="https://github.com/schiekiera/llm-association-geometry">Code1</a> · <a href="https://huggingface.co/datasets/schiekiera/llm-association-geometry">Code2</a> · <a href="https://huggingface.co/huggingface">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">We investigate the extent to which an LLM&#x27;s hidden-state geometry can be recovered from its behavior in psycholinguistic experiments. Across eight instruction-tuned transformer models, we run two experimental paradigms -- similarity-based forced choice and free association -- over a shared 5,000-word vocabulary, collecting 17.5M+ trials to build behavior-based similarity matrices. Using representational similarity analysis, we compare behavioral geometries to layerwise hidden-state similarity and benchmark against FastText, BERT, and cross-model consensus. We find that forced-choice behavior aligns substantially more with hidden-state geometry than free association. In a held-out-words regression, behavioral similarity (especially forced choice) predicts unseen hidden-state similarities beyond lexical baselines and cross-model consensus, indicating that behavior-only measurements retain recoverable information about internal semantic geometry. Finally, we discuss implications for the ability of behavioral tasks to uncover hidden cognitive states.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">We investigate the extent to which an LLM&#x27;s hidden-state geometry can be recovered from its behavior in psycholinguistic experiments.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Interpolation of GEDI Biomass Estimates with Calibrated Uncertainty Quantification</div>
-<div class="meta-line">Authors: Robin Young, Srinivasan Keshav</div>
-<div class="meta-line">First: 2026-01-23T15:35:33+00:00 · Latest: 2026-10-12T22:18:42+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2601.16834v4">Abs</a> · <a href="https://arxiv.org/pdf/2601.16834v4">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Wall-to-wall biomass density estimation from NASA&#x27;s GEDI mission requires interpolating sparse LIDAR observations across heterogeneous landscapes. While Random Forest and XGBoost are widely used, they predict each location independently from satellite features, without adapting to the varying difficulty of heterogeneous landscapes. We introduce Attentive Neural Processes (ANPs), a probabilistic meta-learning architecture that explicitly conditions predictions on local observation sets as well as geospatial foundation model embeddings. ANPs learn a flexible spatial covariance approximator that is more uncertain in complex landscapes and less in homogeneous areas. We validate this approach across five distinct biomes ranging from tropical Amazonian forests to boreal, temperate, and alpine ecosystems, demonstrating that ANPs achieve competitive accuracy while maintaining uncertainty calibration. We demonstrate a scalable, empirically calibrated alternative to ensemble architectures for continental-scale biomass mapping.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Wall-to-wall biomass density estimation from NASA&#x27;s GEDI mission requires interpolating sparse LIDAR observations across heterogeneous landscapes.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">On Sleep-Wake Disorder Identification from Polysomnographic Representations</div>
-<div class="meta-line">Authors: Alvise Dei Rossi, Luigi Fiorillo, Giuliana Monachino, Alessia Calzoni, Julia van der Meer, Markus H. Schmidt, Claudio L. A. Bassetti, Silvia Santini, Francesca Faraci</div>
-<div class="meta-line">First: 2026-10-12T22:09:32+00:00 · Latest: 2026-10-12T22:09:32+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.17451v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.17451v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Self-supervised polysomnography foundation models (PSG FMs) aim to capture clinically useful information beyond sleep staging, yet are rarely compared with sleep-staging encoders pretrained at comparable scale and modality coverage. Using a common whole-night, missingness-aware state-space downstream modeling framework, we compared frozen representations from prominent large-scale, multi-cohort sleep-stage-supervised encoders and self-supervised PSG FMs for multilabel identification of six sleep-wake and circadian disorder groups in 7,906 PSGs from an unseen registry. Although PSG FMs outperformed an EEG-only, single-cohort supervised baseline, this ordering reversed when supervised pretraining approached comparable scale and modality coverage. Transfer learning from neural sleep scorers achieved higher overall performance while exhibiting greater downstream data efficiency. These findings underscore the need for scale- and modality-matched pretrained supervised baselines when assessing PSG FMs&#x27; downstream potential.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Self-supervised polysomnography foundation models (PSG FMs) aim to capture clinically useful information beyond sleep staging, yet are rarely compared with sleep-staging encoders pretrained at comparable scale and modality coverage.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Cross-Market Meta-Learning for Electricity Price Forecasting</div>
-<div class="meta-line">Authors: Delaram Pirhayatifard, Terrence Alsup</div>
-<div class="meta-line">Venue: NeurIPS 2026</div>
-<div class="meta-line">First: 2026-10-12T20:48:53+00:00 · Latest: 2026-10-12T20:48:53+00:00</div>
-<div class="meta-line">Comments: Accepted at the NeurIPS 2026 Workshop on AI Foundations for Power Grids</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.17387v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.17387v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Day-ahead (DA) electricity price forecasting is usually posed per market, with a separate model fitted to each grid&#x27;s own history. This caps accuracy: statistical and tree-based baselines saturate, while higher-capacity sequence models need more training data than a single market&#x27;s few years of hourly prices can supply. Such methods also treat each node as an independent series, discarding the spatial dependencies induced by network topology and congestion. Because price formation across independent system operators (ISOs) is driven by shared physics and largely common market design, we instead treat cross-market history as a pretraining corpus. We present MetaGrid, a topology-aware transformer, meta-trained across markets so that a single zone-count-independent parameter set adapts to an unseen grid. On a leak-free benchmark of five U.S. ISOs, where every model receives the same prices, DA load forecasts and calendar features, MetaGrid attains the lowest average MAE, improving on the best baseline by 3.1\% and on the same architecture trained from scratch by 7.7\%.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Day-ahead (DA) electricity price forecasting is usually posed per market, with a separate model fitted to each grid&#x27;s own history.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">COMPASS: Membership Inference Attack Against Vision Large Language Models via Adaptive Noise Calibration</div>
-<div class="meta-line">Authors: Damien Lo, Hong Kyu Lee, Ruixuan Liu, Li Xiong</div>
-<div class="meta-line">First: 2026-10-12T19:41:52+00:00 · Latest: 2026-10-12T19:41:52+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.17332v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.17332v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Vision large language models (VLLMs) are deployed in privacy-sensitive domains, raising training-data exposure concerns. Existing gray-box membership inference attacks (MIAs) commonly rely on entropy statistics or generated descriptions, requiring costly generation with limited membership separation. Perturbation-based methods instead measure response changes but focus on large perturbations, leaving VLLM membership behavior under smaller perturbations poorly understood. We systematically characterize VLLM membership behavior under controlled Gaussian perturbations across noise levels at fine resolution. We find that optimal perturbation magnitude and membership-signal direction vary across model-dataset pairs. In many settings, a previously unstudied low-noise regime yields stronger separation than large perturbations, with members exhibiting lower divergence than non-members, reversing the conventional score direction. Other settings retain the conventional direction, demonstrating that neither a fixed perturbation magnitude nor a predetermined score orientation is universally reliable. We propose COMPASS, an adaptive gray-box MIA that calibrates both the perturbation magnitude and membership-score direction using a loosely distribution-matched, known non-member reference set. We instantiate COMPASS using Renyi-normalized KL divergence and Renyi divergence, with max-k aggregation over the most informative image-logit positions. Across LLaVA v1.5-7B, MiniGPT-4, and HuluMed-32B, spanning pretraining, instruction-tuning, and medical-image datasets, COMPASS outperforms baselines. On general-domain data, COMPASS achieves AUCs up to 0.88. On the distribution-matched medical evaluation, it reaches 0.64 AUC, while the strongest baseline remains at chance level. These results establish full-range adaptive perturbation analysis as an effective approach to VLLM membership inference.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Vision large language models (VLLMs) are deployed in privacy-sensitive domains, raising training-data exposure concerns.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Releasing the Inner Jev: A Simple Recipe for Open Decision Models</div>
-<div class="meta-line">Authors: Jonathan Geuter, Andrew Cheng, David Alvarez-Melis</div>
-<div class="meta-line">First: 2026-10-12T17:59:37+00:00 · Latest: 2026-10-12T17:59:37+00:00</div>
-<div class="meta-line">Comments: 23 pages, 5 figures</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.17205v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.17205v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">LLM-based decision-making systems, also called System One models, have recently gained popularity, most notably through Jev (Almeida, 2026). Given a typed input state, a question, and a set of options, they return a probability for each option in a single forward pass, without text generation. We show that existing open instruction-tuned language models can achieve comparable performance \textit{without any additional training}, by reading out answers from letters (A, B, C, etc.) in the model&#x27;s output logits at the last token position. Furthermore, we show how a simple supervised fine-tuning recipe can improve their performance further. We evaluate four open instruction-tuned language models: Gemma 4 31B, Gemma 4 12B, Qwen3.6-27B, and Qwen3.5-4B. We fine-tune each using LoRA and a decision head initialized from a slice of the language model head. Furthermore, we introduce OpenDecisions, a novel 2,352-question validation dataset designed to reflect the task composition of JevBench (JevBench main- tainers, 2026) and which computes a Capability score based on accuracy and calibration metrics. Without fine-tuning, Gemma 4 31B scores 79.6 on OpenDecisions, compared to Jev&#x27;s 80.1. After undergoing our fine-tuning recipe, it scores 84.4 on OpenDecisions and 81.5 on JevBench v1.7, outperforming Jev by 4.3 and 4.4 Capability points respectively and setting a new state-of-the-art on OpenDecisions. On a suite of public decision datasets, our models achieve accuracy comparable to Jev, with lower calibration error. Our results show that open language models already possess System One capabilities, and with simple fine-tuning they outperform Jev on a wide range of decision tasks. We release our models, serving code, and OpenDecisions.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">LLM-based decision-making systems, also called System One models, have recently gained popularity, most notably through Jev (Almeida, 2026).</div>
-</details>
-</div>
-<div class="card">
-<div class="title">The Format is the Filter: Scoring Format Fixes What an LLM Judge Can Express</div>
-<div class="meta-line">Authors: Lovedeep Gondara, Jekaterina Novikova, Sagarika Suresh, Jack Ji, Jithin Pradeep</div>
-<div class="meta-line">First: 2026-10-12T17:36:39+00:00 · Latest: 2026-10-12T17:36:39+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.17158v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.17158v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">When an LLM judge filters instruction-tuning data, its scoring format (binary verdict, 1--5 rating, 0--100 score, or comparison) is rarely justified or ablated. Holding the candidate pool, judge prompt, decoding and selection budget fixed, we score 15,406 UltraFeedback candidates under five formats with three judges, curate, fine-tune 66 models, and evaluate them with four judges. A 0--100 scale is worth only 7--12 equally used levels, two to three times a 1--5 scale rather than twenty, and a binary verdict leaves the top score tied in 77--78\% of prompts, so most selections are made at random. These properties are set by the format almost independently of the judge. Kendall&#x27;s $τ_b$ hides them: it ranks binary best while $τ_a$ and top-1 agreement rank it last, because it discounts the ties a selector must break at random. Both comparative formats inherit a slot bias whose sign differs across judges. Downstream, curated data beat random selection under every evaluation judge, robust to length and markdown adjustment, but no ordering among formats is detectable. We propose four quantities that judge-based curation pipelines should report.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">When an LLM judge filters instruction-tuning data, its scoring format (binary verdict, 1--5 rating, 0--100 score, or comparison) is rarely justified or ablated.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">EmoStance: Response-Side Affective-Orientation Control for Empathetic Response Generation via Emoji Weak Supervision</div>
-<div class="meta-line">Authors: Ziyuan Jin, Yuxuan Ge, Zheng Tian</div>
-<div class="meta-line">Venue: EMNLP 2026 Oral Presentation</div>
-<div class="meta-line">First: 2026-09-02T05:43:14+00:00 · Latest: 2026-10-12T14:58:06+00:00</div>
-<div class="meta-line">Comments: Accepted to the Main Conference of EMNLP 2026(Oral Presentation); manuscript unchanged from v1</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2609.02133v2">Abs</a> · <a href="https://arxiv.org/pdf/2609.02133v2">PDF</a> · <a href="https://github.com/18277390221/EmoStance">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Empathetic response generation requires models to decide not only what to say, but also how to respond to the previous speaker&#x27;s affective situation. We formulate this as response-side affective-orientation control and use multi-annotator emoji distributions as weak affective--attitudinal evidence, rather than as output symbols or gold labels, to induce a latent control space that operationally approximates listener stance. We construct EmojiDialogue, an utterance-level extension of EmpatheticDialogues with emoji votes and confidence scores, and propose EmoStance, which models source-side affective expression, predicts a soft response-side orientation from dialogue context and speaker roles, and steers a frozen instruction-tuned LLM through continuous prefix embeddings. In blind pairwise evaluation with 20 annotators and 800 judgments, EmoStance achieves a 62.2% decisive win rate, with the clearest gains in contextual specificity and perceived responsiveness, while remaining complementary to external-knowledge methods. Code, annotation metadata, and reconstruction scripts are available in our GitHub repository: https://github.com/18277390221/EmoStance.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Empathetic response generation requires models to decide not only what to say, but also how to respond to the previous speaker&#x27;s affective situation.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Cross-Subject and Cross-Montage EEG Transfer Learning via Individual Tangent Space Alignment and Spatial-Riemannian Feature Fusion</div>
-<div class="meta-line">Authors: Nicole Lai-Tan, Xiao Gu, Marios G. Philiastides, Fani Deligianni</div>
-<div class="meta-line">First: 2025-08-11T17:37:17+00:00 · Latest: 2026-10-12T13:33:52+00:00</div>
-<div class="meta-line">Comments: 15 pages, 8 figures</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2508.08216v2">Abs</a> · <a href="https://arxiv.org/pdf/2508.08216v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Personalised music-based interventions offer a powerful means of supporting motor rehabilitation by dynamically tailoring auditory stimuli to provide external timekeeping cues, modulate affective states, and stabilise gait patterns. Generalisable Brain-Computer Interfaces (BCIs) thus hold promise for adapting these interventions across individuals. However, inter-subject variability in EEG signals, further compounded by movement-induced artefacts and motor planning differences, hinders the generalisability of BCIs and results in lengthy calibration processes. We propose Individual Tangent Space Alignment (ITSA), a novel pre-alignment strategy incorporating subject-specific recentering, distribution matching, and supervised rotational alignment to enhance cross-subject generalisation. Our hybrid architecture fuses Regularised Common Spatial Patterns (RCSP) with Riemannian geometry in parallel and sequential configurations, improving class separability while maintaining the geometric structure of covariance matrices for robust statistical computation. Using leave-one-subject-out cross-validation, `ITSA&#x27; demonstrates significant performance improvements across subjects and conditions. The parallel fusion approach shows the greatest enhancement over its sequential counterpart, with robust performance maintained across varying data conditions and electrode configurations. The code will be made publicly available at the time of publication.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Personalised music-based interventions offer a powerful means of supporting motor rehabilitation by dynamically tailoring auditory stimuli to provide external timekeeping cues, modulate affective states, and stabilise gait patterns.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Making LoRA Identifiable: Orthogonal Alignment for Continual Learning</div>
-<div class="meta-line">Authors: Pratik Rakesh Singh, Mohammadi Zaki, Akash Saha, Aneesh Mukkamala, Pankaj Wasnik</div>
-<div class="meta-line">Venue: NeurIPS 2026</div>
-<div class="meta-line">First: 2026-10-12T12:14:32+00:00 · Latest: 2026-10-12T12:14:32+00:00</div>
-<div class="meta-line">Comments: Accepted at NeurIPS 2026</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.16664v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.16664v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">There is growing interest in applying Parameter-Efficient Fine-Tuning (PEFT) to Continual Learning, as it enables faster training, mitigates catastrophic forgetting, and facilitates better adaptation to new tasks. Prior approaches have explored a range of strategies, including extending new LoRA branches for each incoming task, training under orthogonal loss objectives across all task-specific LoRA modules, and employing gating mechanisms to integrate new and existing LoRA modules. However, these methods incur memory costs that grow linearly with the number of tasks, limiting their scalability. More recent approaches investigate training a single LoRA by leveraging asymmetries in its parameterization; however, they often suffer from insufficient representational alignment across the LoRA parameter space. To address these limitations, we propose Stiefel Optimization and Aligned Rotation (SOAR), a two-stage framework for continual LoRA learning. First, we constrain the A matrix to lie on the Stiefel manifold, thereby reducing coordinate misalignment to the space of orthogonal rotation matrices. Second, we introduce an Orthogonal Procrustes alignment procedure for the B matrix to estimate the optimal rotation, coupled with a per-rank retention merging strategy that quantifies directional agreement between representations of new and previously learned tasks. We conduct extensive experiments across multiple models and benchmarks, demonstrating that SOAR achieves strong continual learning performance without incurring additional memory overhead.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">There is growing interest in applying Parameter-Efficient Fine-Tuning (PEFT) to Continual Learning, as it enables faster training, mitigates catastrophic forgetting, and facilitates better adaptation to new tasks.</div>
-</details>
 </div></div>
     <details style="margin-top:16px" class="detail"><summary>History</summary>
-      <div class="history-list"><a href="archive/20261015_0559.html">20261015_0559</a>
+      <div class="history-list"><a href="archive/20261016_0552.html">20261016_0552</a>
+<a href="archive/20261015_0559.html">20261015_0559</a>
 <a href="archive/20261014_0709.html">20261014_0709</a>
 <a href="archive/20261013_0906.html">20261013_0906</a>
 <a href="archive/20261012_0635.html">20261012_0635</a>
