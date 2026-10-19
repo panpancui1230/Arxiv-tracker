@@ -74,12 +74,177 @@ summary{cursor:pointer;color:var(--acc)}
   <button class="btn" onclick="__expandAll(false)">Collapse All</button>
 </div>
 
-        <span class="badge">2026-10-19 05:11</span>
+        <span class="badge">2026-10-20 06:41</span>
       </div>
     </div>
     <div class="hr"></div>
     <div>Latest digest</div>
     <div class="row"><div class="card">
+<div class="title">Activation-Efficient Fine-Tuning via Sequence-Compressed Low-Rank Subspaces</div>
+<div class="meta-line">Authors: Irene Tenison, Stella Ahn, Miriam Kim, Ebtisam Alshehri, Lalana Kagal</div>
+<div class="meta-line">First: 2026-04-03T17:05:33+00:00 · Latest: 2026-10-16T15:29:14+00:00</div>
+<div class="meta-line">Comments: Accepted to AACL 2026</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2604.22783v2">Abs</a> · <a href="https://arxiv.org/pdf/2604.22783v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Parameter-Efficient Fine-Tuning (PEFT) has become the standard approach for adapting large language models (LLMs). However, despite reducing trainable parameter counts, many PEFT methods remain memory-bound by token-level activation intermediates that scale linearly with sequence length, limiting their practicality for long-context and on-device adaptation. Unlike prior memory-efficient PEFT approaches that preserve token-level adapter activations, LARS (Low-memory Activation-Rank Subspace) reduces the sequence-length scaling of stored adapter activation intermediates from O(BSRL) to O(BRL) by performing adaptation within a sequence-level low-rank subspace. Through pooled feature extraction, low-rank subspace modulations, and residual projection, LARS reduces the overall memory footprint by 23% on GPUs and 47.8% on CPUs relative to LoRA at S = 1024, with relative savings increasing with context length. Experiments across reasoning, understanding, long-context, retrieval, and token-level tasks show that LARS maintains competitive performance relative to LoRA while substantially improving memory efficiency. Beyond GPUs, LARS also reduces average CPU power and energy consumption per optimisation step by 22.43% and 22.06%, respectively. These results demonstrate that activation-efficient adaptation provides a practical path toward resource-constrained and on-device fine-tuning of LLMs.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Parameter-Efficient Fine-Tuning (PEFT) has become the standard approach for adapting large language models (LLMs).</div>
+</details>
+</div>
+<div class="card">
+<div class="title">How Finite-Rank Bottlenecks Shape the Low-Rank Adaptation Landscape</div>
+<div class="meta-line">Authors: Long Nguyen-Chi, Quynh Nguyen, Thanh Nguyen-Cung, Binh T. Nguyen</div>
+<div class="meta-line">Venue: NeurIPS 2026</div>
+<div class="meta-line">First: 2026-10-16T11:50:01+00:00 · Latest: 2026-10-16T11:50:01+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.23343v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.23343v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Low-rank adaptation (LoRA) has become the standard method for parameter-efficient fine-tuning of large pretrained models, yet theoretical explanations for why low-rank updates suffice remain incomplete. Most existing analyses rely on the Neural Tangent Kernel (NTK) regime, which linearizes the network around the pretrained weights. In this work, we take a different approach that requires no linearization: our key observation is that, once the backbone is frozen, the loss sees each adapted weight matrix only through a finite-rank linear map induced by the frozen activations. Trace-norm regularization then forces the optimizer to pick a low-rank matrix among all matrices that produce the same observed output. This yields global minimizers whose ranks are controlled by the rank of this map, which we call the \emph{bottleneck rank}, rather than the sample size. For multi-head attention, we obtain tighter rank upper bounds by exploiting two additional invariances: row-wise softmax is insensitive to additive row constants in the score matrix, and value updates are observable only after attention weighting and frozen output projection. For the factorized LoRA objective with weight decay, we prove a complementary result on the nonconvex side: after an arbitrarily small generic positive semidefinite perturbation, every first-order stationary point is rank-deficient once the LoRA rank exceeds a threshold determined by the bottleneck rank. Finally, we show that global minimizers of the perturbed objective are near-optimal for the original trace-norm problem, and we provide uniform generalization bounds governed by the spectral structure of the frozen features.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Low-rank adaptation (LoRA) has become the standard method for parameter-efficient fine-tuning of large pretrained models, yet theoretical explanations for why low-rank updates suffice remain incomplete.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Minimax-optimal Scaling Laws in Ridge Regression via Transfer Learning</div>
+<div class="meta-line">Authors: Yalda Shabanzadeh, Diyuan Wu, Marco Mondelli</div>
+<div class="meta-line">First: 2026-10-16T11:41:22+00:00 · Latest: 2026-10-16T11:41:22+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.23337v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.23337v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Pretrained models are often reused across downstream tasks, motivating the question of whether this transfer learning procedure can provide a substantial performance improvement, namely, in terms of the scaling law. We address this question in the prototypical setting of high-dimensional regression, where (i) a pretrained \emph{source} model is trained via ridge regression, and (ii) a fine-tuned \emph{target} model is regularized via the $L_2$ distance from the source estimator. First, we establish a deterministic equivalent for the risk of this two-step procedure under both model and covariance shift. Next, by specializing the deterministic equivalent to a shared regression function and commuting power-law covariance spectra, we identify a regime where the resulting scaling law achieves the minimax-optimal exponent. Notably, in this regime, the optimal source regularization depends on source data only, indicating its universality across all targets. Furthermore, we show that the same optimal rate is achieved by performing the fine-tuning step via one-pass stochastic gradient descent. We support our theoretical analysis via experiments on both synthetic settings and language models.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Pretrained models are often reused across downstream tasks, motivating the question of whether this transfer learning procedure can provide a substantial performance improvement, namely, in terms of the scaling law.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">FLARE: Physics-Grounded Evaluation of Language-Model Agents for Feeder Restoration with Degraded Observations</div>
+<div class="meta-line">Authors: BHVSP Subrahmanyam, Neeraj Choudhary</div>
+<div class="meta-line">First: 2026-10-16T10:24:32+00:00 · Latest: 2026-10-16T10:24:32+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.23251v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.23251v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Restoring service after distribution-grid faults requires decisions from incomplete and conflicting information while respecting electrical constraints. Addressing this need, we introduce FLARE (Feeder-Level Agent Restoration Evaluation), a physics-grounded benchmark for post-isolation feeder restoration. FLARE con- tains 800 AC-feasible cases across five observation settings and allows agents to gather evidence, evaluate switches, and perform restoration actions under fixed operational limits. We evaluate five instruction-tuned models over 78,750 episodes, including topology, distributed-generation, and loading shifts. Mean normalized regret ranges from 0.082 to 0.148. Although every model has zero median regret, P95 regret ranges from 0.814 to 1.000, revealing an important failure tail. Shadow replay shows that 96.4% of 15,706 guard-rejected actions would have caused a physical violation. FLARE enables reproducible evaluation of language-model based restoration support while emphasizing the need for external safety checks.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Restoring service after distribution-grid faults requires decisions from incomplete and conflicting information while respecting electrical constraints.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">LongForge: Measuring and Improving Long-Context Instruction Data via Evidence-Assertion Reasoning Graphs</div>
+<div class="meta-line">Authors: Ziyang Chen, Junlong Jia, Xing Wu, Tinghao Yu, Songlin Hu</div>
+<div class="meta-line">First: 2026-10-16T09:05:30+00:00 · Latest: 2026-10-16T09:05:30+00:00</div>
+<div class="meta-line">Comments: Work in progress</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.23167v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.23167v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Existing quality control for long-context instruction-tuning data is a one-shot judgment inside the generation pipeline that leaves only a scalar, revealing neither which document parts an answer uses nor how many reasoning steps it writes down; the data can thus be neither audited nor controlled. We formalize data quality as a property of the alignment structure among document, question, and answer, and build LongForge, which pairs an analyzer that measures long-context data with a synthesizer that generates it. The analyzer reverse-reconstructs each sample into an evidence-assertion reasoning graph and programmatically computes four dimensions on it: breadth, depth, correctness, and completeness. Every reading traces back to specific evidence spans and reasoning steps, making data auditable. Measuring seven mainstream datasets reveals two previously unquantified defects: breadth barely grows with document length, and depth is generally low, the two being nearly orthogonal. The synthesizer then embeds the analyzer into generation, gating on correctness and completeness and deferring breadth and depth to a training-time mixture over measured values, which makes the training distribution controllable. On two backbones, its two mixtures, LongForge-1 and LongForge-N, outperform the strongest baseline by 2.2-4.7 points on average over six long-context benchmarks, and in a controlled comparison that holds the gate and the candidate pool fixed, raising breadth and depth alone is worth a further 1.16 points, making the structural distribution of training data a lever on downstream quality rather than only a description of it.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Existing quality control for long-context instruction-tuning data is a one-shot judgment inside the generation pipeline that leaves only a scalar, revealing neither which document parts an answer uses nor how many reasoning steps it writes down; the data can thus be neither audited nor controlled.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">HEM-Med: A Hierarchical Agentic Memory Framework for Safe Multi-Center Medication Recommendation</div>
+<div class="meta-line">Authors: Min Xiao, Jin Li, Shoujin Wang, Yeguang Zhen, Yishuo Li, Wenpeng Lu</div>
+<div class="meta-line">First: 2026-10-14T13:39:34+00:00 · Latest: 2026-10-16T08:52:31+00:00</div>
+<div class="meta-line">Comments: BIBM 2026</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.20191v2">Abs</a> · <a href="https://arxiv.org/pdf/2610.20191v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Medication recommendation (MR) is critical for clinical decision support. While existing MR methods are mostly designed for single-center learning, where only one independent hospital is involved, multi-center MR with hospitals of different scales has become increasingly demanding in practice. In multi center settings, abundant data from large medical centers can improve recommendation performance for low-resource centers. Despite a few preliminary attempts on this task, two critical gaps remain. Gap 1: Existing multi-center methods fail to disentangle transferable cross-hospital clinical experience from hospital-specific prescribing patterns, limiting clinical feasibility and physician acceptance. Gap 2: They commonly overlook multi label safety constraints of MR, including drug-drug interaction risks and local formulary feasibility, which are essential for safe real-world deployment. To address these gaps, we propose HEM-Med, a novel hierarchical agentic memory framework for multi-center MR. To address Gap 1, we design a disentangled hierarchical memory module that builds patient-level medication context attribution records and disentangles them into cross hospital experience memory and hospital-specific residual memory. To address Gap 2, we introduce a safety-aware medication set generation module, which integrates dual-level experience retrieval with safety-aware set decoding to produce clinically relevant, safer, and locally adaptive medication recommendations. Experiments on a real-world multi-center eICU dataset show that HEM-Med outperforms representative transfer learning, LLM-based, and MR baselines in terms of both recommendation accuracy and safety.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Medication recommendation (MR) is critical for clinical decision support.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">ToPA: Block-wise Toeplitz Adaptation for Expressive and Efficient Fine-Tuning</div>
+<div class="meta-line">Authors: Sicong Li, Qianqian Xu, Zhiyong Yang, Zitai Wang, Longtao Huang, Xiaochun Cao, Qingming Huang</div>
+<div class="meta-line">First: 2026-10-16T03:38:18+00:00 · Latest: 2026-10-16T03:38:18+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.22883v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.22883v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Parameter-Efficient Fine-Tuning (PEFT) has emerged as a prevalent strategy for adapting large pre-trained models. Among PEFT techniques, reparameterization-based methods, particularly those that employ low-rank or sparsity structures, have attracted significant attention. However, these approaches often underperform full fine-tuning. Specifically, low-rank methods constrain the update rank, which is misaligned with the inherently high-rank nature of full fine-tuning. In contrast, sparsity-based techniques limit the flexibility of the parameter space and compromise connectivity across weights. To overcome these limitations, we explore the use of Toeplitz matrices, whose entries are constant along each diagonal, therefore providing a compact parameterization without imposing explicit rank or sparsity constraints. A straightforward approach is to update weights via a product of Toeplitz matrices. However, similar to RNNs, long multiplicative chains often lead to gradient instability. To address this issue, we propose \textbf{ToPA}, a more refined version of this idea that replaces standard Toeplitz matrices with block-wise Toeplitz, greatly increasing each factor&#x27;s capacity and shortening the chain, thereby stabilizing training and improving expressiveness. We theoretically show that products of block-wise Toeplitz matrices can approximate arbitrary matrices under shorter chain length, justifying the structural design of ToPA. Furthermore, we demonstrate that ToPA offers greater expressivity than existing low-rank and sparse parameterizations. Empirical evaluations across 21 NLP and CV datasets, spanning 5 model architectures, consistently validate the effectiveness of ToPA.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Parameter-Efficient Fine-Tuning (PEFT) has emerged as a prevalent strategy for adapting large pre-trained models.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">TimpaTeks: Automatic In-place Text Sequence Modification via Diffusion Language Model Steering</div>
+<div class="meta-line">Authors: Ryandito Diandaru, Ahmed Elshabrawy, Fadli Aulawi Al Ghiffari, Ikhlasul Akmal Hanif, Alham Fikri Aji</div>
+<div class="meta-line">First: 2026-06-07T02:13:17+00:00 · Latest: 2026-10-16T03:30:18+00:00</div>
+<div class="meta-line">Comments: 16 pages</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2606.08408v2">Abs</a> · <a href="https://arxiv.org/pdf/2606.08408v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">We extend activation steering to diffusion language models (DLMs) and study a novel problem that arose due to the inference mechanism of DLMs: Modifying a text in-place to manifest a different concept. We propose TimpaTeks, an automatic in-place text modification mechanism using DLMs. Experiments on IMDB movie reviews (sentiment) and a synthetic Cats and Dogs Dataset (arbitrary, more unconventional concept steering) show that TimpaTeks provides a feasible novel mechanism to steer diffusion language model outputs in-place. TimpaTeks enables in-place modification while simultaneously lowers sentence perplexity and retaining the original sentence structre without the need of instruction tuned models. TimpaTeks is also computationally cheaper than prompt-based DLM steering, as it performs denoising in-place rather than constructing an additional prompt-conditioned output sequence.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">We extend activation steering to diffusion language models (DLMs) and study a novel problem that arose due to the inference mechanism of DLMs: Modifying a text in-place to manifest a different concept.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">ShadowFPT: Backdooring Federated Prompt Tuning via Shadow Triggers</div>
+<div class="meta-line">Authors: Kun Zhai, Teng Li, Yunhao Feng, Xingjun Ma</div>
+<div class="meta-line">First: 2026-10-16T03:22:06+00:00 · Latest: 2026-10-16T03:22:06+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.22871v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.22871v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Federated Prompt Tuning (FPT) adapts large vision--language models by freezing the pretrained backbone and optimizing only lightweight prompt parameters across clients. Although this design improves communication and parameter efficiency, it creates an overlooked security risk. Since the backbone is shared and frozen, a malicious client can induce backdoor behavior through the representation space while keeping its uploaded prompt updates close to benign ones. We propose \textbf{ShadowFPT}, a targeted backdoor attack that exploits this frozen-backbone attack surface. ShadowFPT first pretrains a learnable \emph{Shadow Trigger} against the frozen CLIP visual encoder, using either auxiliary public data or the malicious client&#x27;s local data, so that triggered inputs are steered toward the target class in representation space. During federated prompt tuning, the malicious client adapts the trigger under the current global prompt and then optimizes its local prompt on both clean and triggered samples. Only prompt parameters are uploaded to the server, while the trigger and frozen encoders remain local. By shifting most of the attack burden from prompt updates to trigger-induced representation steering, ShadowFPT achieves targeted misclassification while preserving prompt-space stealthiness. Across multiple datasets, aggregation rules, and non-IID federated partitions, ShadowFPT increases the attack success rate from 19.81\% to 90.36\% in our main setting, while maintaining clean accuracy. It remains effective across textual, visual, and joint vision--language prompt tuning. These results identify frozen backbones as stealthy and underexplored backdoor surfaces in federated prompt tuning, suggesting that defenses based only on prompt-update anomaly detection are insufficient.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Federated Prompt Tuning (FPT) adapts large vision--language models by freezing the pretrained backbone and optimizing only lightweight prompt parameters across clients.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Pluvio: Assembly Clone Search for Out-of-domain Architectures and Libraries through Transfer Learning and Conditional Variational Information Bottleneck</div>
+<div class="meta-line">Authors: Zhiwei Fu, Steven H. H. Ding, Furkan Alaca, Benjamin C. M. Fung, Philippe Charland</div>
+<div class="meta-line">First: 2023-07-20T06:55:37+00:00 · Latest: 2026-10-16T01:20:09+00:00</div>
+<div class="meta-line">Comments: 13 pages and 4 figures. This work has been submitted to the IEEE for possible publication</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2307.10631v2">Abs</a> · <a href="https://arxiv.org/pdf/2307.10631v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">The practice of code reuse is crucial in software development for a faster and more efficient development lifecycle. In reality, however, code reuse practices lack proper control, resulting in issues such as vulnerability propagation and intellectual property infringements. Assembly clone search, a critical shift-right defence mechanism, has been effective in identifying vulnerable code resulting from reuse in released executables. Recent studies on assembly clone search demonstrate a trend towards using machine learning-based methods to match assembly code variants produced by different toolchains. However, these methods are limited to what they learn from a small number of toolchain variants used in training, rendering them inapplicable to unseen architectures and their corresponding compilation toolchain variants.
+  This paper presents the first study on the problem of assembly clone search with unseen architectures and libraries. We propose incorporating human common knowledge through large-scale pre-trained natural language models, in the form of transfer learning, into current learning-based approaches for assembly clone search. Transfer learning can aid in addressing the limitations of the existing approaches, as it can bring in broader knowledge from human experts in assembly code. We further address the sequence limit issue by proposing a reinforcement learning agent to remove unnecessary and redundant tokens. Coupled with a new Variational Information Bottleneck learning strategy, the proposed system minimizes the reliance on potential indicators of architectures and optimization settings, for a better generalization of unseen architectures. We simulate the unseen architecture clone search scenarios and the experimental results show the effectiveness of the proposed approach against the state-of-the-art solutions.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">The practice of code reuse is crucial in software development for a faster and more efficient development lifecycle.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Refusal Is Not Robustness: Measuring Harmful Reachability in Autoregressive Language Models</div>
+<div class="meta-line">Authors: Parv Kapoor, Teresa Fortes, Claudia Mamede, Rui Abreu, Jonathan Aldrich, Eunsuk Kang</div>
+<div class="meta-line">First: 2026-10-15T23:45:21+00:00 · Latest: 2026-10-15T23:45:21+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.22754v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.22754v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">LLM safety evaluations via jailbreaking typically index on attack success rate (ASR): whether a generated response violates safeguards. However, ASR only evaluates sampled outputs and provides little information on the underlying generation process. Autoregressive language models define distributions over possible outputs, and a sampled refusal can coexist with substantial probability mass on harmful generation paths. We study this hidden structure through bounded continuation analysis (BCA), which models autoregressive generation as a stochastic process over token prefixes and computes the finite-horizon probability that generation reaches a harmful continuation. BCA constructs a bounded continuation tree, labels terminal continuations with a semantic harm evaluator, and estimates harmful reachability using exact probabilistic model checking. BCA complements ASR by measuring how much harmful behavior remains accessible beneath a sampled safe response. This makes it useful for distinguishing models that look identical under measured ASR values, and allocating red-team effort toward regions of the generation process with greater hidden risk. Across four instruction-tuned LLMs and 100 JailbreakBench behaviors, we show that BCA effectively quantifies hidden harmful behavior and provides a useful signal to guide red teaming.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">LLM safety evaluations via jailbreaking typically index on attack success rate (ASR): whether a generated response violates safeguards.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Risk and Refusal: Mechanisms of LLM Responses to Suicidal Ideation</div>
+<div class="meta-line">Authors: Drishti Goel, Soorya Ram Shimgekar, Jeongah Lee, Violeta J. Rodriguez, Daniel S. Brown, Ravi Karkar, Koustuv Saha</div>
+<div class="meta-line">First: 2026-10-15T22:34:45+00:00 · Latest: 2026-10-15T22:34:45+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.22715v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.22715v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Refusal is a common safety mechanism in large language models (LLMs), yet in contexts of suicidal ideation (SI), refusing to engage can itself constitute a safety failure. We evaluate how eight instruction-tuned LLMs respond to SI and self-harm disclosures across three datasets, varying whether models are informed that a disclosure expresses SI and whether they receive a clinician-developed response protocol, and complement this with mechanistic analyses in six open-weight models. Our results reveal a nuanced relationship between refusal and response-level risk. At baseline, elevated risk in model responses is driven primarily by inattention to the disclosure, alongside refusal to engage. Mechanistic analyses suggest that models may refuse SI disclosures through the same direction that mediates their refusals of harmful requests. However, informing models of the SI context, or suppressing refusal directly, increases engagement without reliably lowering response risk, and may raise it. In contrast, the clinician-guided protocol consistently reduces response-level risk while also reducing refusal. Together, these analyses and ablations motivate the need for models that refuse only when warranted and engage in interactionally safe ways when users disclose SI.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Refusal is a common safety mechanism in large language models (LLMs), yet in contexts of suicidal ideation (SI), refusing to engage can itself constitute a safety failure.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">When Does Uncertainty Measure RAG Hallucination Risk?</div>
+<div class="meta-line">Authors: Rajeel Ahmad Ansari, Tautik Agrahari</div>
+<div class="meta-line">Venue: Proceedings of the 9th International Conference on Natural Language and Speech Processing (ICNLSP-2026), pp. 53-58, 2026</div>
+<div class="meta-line">First: 2026-10-15T20:17:26+00:00 · Latest: 2026-10-15T20:17:26+00:00</div>
+<div class="meta-line">Comments: 6 pages. Accepted for oral presentation at ICNLSP 2026</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.22615v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.22615v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Uncertainty can measure hallucination risk in retrieval-augmented generation (RAG), but only when retrieved evidence constrains the answer. When evidence is present, unsupported factual claims become less likely; when retrieval coverage is poor, the model can answer from internal knowledge and assign high probability to unsupported claims. We test this across four instruction-tuned models on HotpotQA and SQuAD. After matching faithful and hallucinated answers within word-count bins, length-only classifiers fall near chance, while perplexity reaches 0.81--0.91 AUROC on targeted unsupported edits. Varying retrieval depth shows why the score changes meaning: detection can weaken with only the top-ranked passage, then recover after adding a second passage. A combined uncertainty and semantic-drift score improves calibration, and measurements remain above chance on RAGTruth QA. Results support a conditional view of uncertainty as a useful measure of RAG hallucination risk.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Uncertainty can measure hallucination risk in retrieval-augmented generation (RAG), but only when retrieved evidence constrains the answer.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Cultural (In)Competence: Investigating Culture-Specific Stereotype Detection Capabilities of LLMs</div>
+<div class="meta-line">Authors: Maximilian Spliethöver, Jannes Lötfering, Dominik Bachmann, Alexander Espig, Willem Zuidema, Katrin Schulz, Henning Wachsmuth</div>
+<div class="meta-line">Venue: EMNLP 2026</div>
+<div class="meta-line">First: 2026-10-15T18:42:59+00:00 · Latest: 2026-10-15T18:42:59+00:00</div>
+<div class="meta-line">Comments: Accepted to Findings of the Association for Computational Linguistics: EMNLP 2026</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.22545v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.22545v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Stereotypes are subjective constructs that are mediated by the cultural context in which they are viewed. Successfully modeling them thus also requires cultural competence. When using large language models (LLMs) for stereotype-related tasks, such as their detection, it is therefore crucial that models can access relevant cultural knowledge and adjust responses accordingly. Since LLMs have shown disparities in what cultural knowledge is available to them, their capacity regarding stereotypes may also be disparate across languages and cultural contexts (e.g., for non-English languages or for non-US contexts). In this paper, we systematically investigate the effectiveness of LLMs for culture-specific stereotype detection across three factors: (1) the prompting language, (2) the instruction tuning language, and (3) the fine-tuning dataset size. We conduct experiments for US, Dutch, and Chinese cultural contexts. Our results suggest that LLMs do not reliably account for cultural contexts and overpredict the presence of stereotypes. Non-English prompts seem to improve consideration of cultural context and thus lead to more effective predictions. Moreover, we find that additional instruction tuning reduces false-positive rates and that training data size moderates detection effectiveness non-monotonically.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Stereotypes are subjective constructs that are mediated by the cultural context in which they are viewed.</div>
+</details>
+</div>
+<div class="card">
 <div class="title">Evaluation Awareness Beyond English: Do LLMs Act Differently When Tested in Indic Languages?</div>
 <div class="meta-line">Authors: Trizal Garg, Sibayan Mitra, Arya Karanjkar, Advait Singh, Jagat Sesh Challa, Yash Sinha, Siddharth Mehrotra, Dhruv Kumar, Pratham Yogish Maliya</div>
 <div class="meta-line">First: 2026-10-15T17:53:33+00:00 · Latest: 2026-10-15T17:53:33+00:00</div>
@@ -271,176 +436,10 @@ summary{cursor:pointer;color:var(--acc)}
 <details class="detail"><summary>Summary / 总结</summary>
 <div class="mono">Existing methods for transfer learning struggle to deal with situations where the source datasets are limited and not guaranteed to be well-aligned with the target dataset.</div>
 </details>
-</div>
-<div class="card">
-<div class="title">OTel: Open Telco AI Datasets, Benchmarks, and Models</div>
-<div class="meta-line">Authors: Farbod Tavakkoli, Gregory Diamos, Kenneth Church, Roderic Paulk, Jorden Terrazas, David Kanter, Mark Austin, Imtiaz Karim, Syed Ali Raza Zaidi, Lina Bariah, Merouane Abdelkader Debbah, Ali Maatouk, Louis Powell, Nikolaos Vasiloglou, Ashish Vaswani, Somanshu Singla, Adarsh Chaluvaraju</div>
-<div class="meta-line">First: 2026-10-06T05:03:29+00:00 · Latest: 2026-10-14T20:19:14+00:00</div>
-<div class="meta-line">Comments: Pre-print</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.07766v4">Abs</a> · <a href="https://arxiv.org/pdf/2610.07766v4">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">We present Open Telco (OTel), an open telecom AI resource that releases derived telecom datasets for retrieval, reranking, instruction tuning, and safety/abstention, together with 30 full-parameter post-trained baselines spanning 10 embedding models, 3 rerankers, and 17 language models. The community has already engaged substantially with the resource: as of May 3, 2026, the released models have been downloaded over 16 million times and the project has received 157+ pieces of media coverage worldwide. Building on prior open telecom datasets and benchmarks, OTel provides documented telecom data sources, held-out evaluation partitions, trained embedding models, rerankers, context-grounded LLMs, and safety/abstention data in one unified resource. Each baseline starts from an open-weight model and is post-trained on OTel-derived data using an open training recipe, then evaluated on held-out OTel evaluation partitions. OTel post-training improves performance across all three model families: embedding retrieval reaches 93.1% NDCG@10, reranking reaches 0.947 MRR@10, and language-model correctness reaches 87.8%. We release OTel as a reproducible starting point and invite the community to expand the data, improve embedding and reranking models, and build stronger context-grounded telecom LLMs.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">We present Open Telco (OTel), an open telecom AI resource that releases derived telecom datasets for retrieval, reranking, instruction tuning, and safety/abstention, together with 30 full-parameter post-trained baselines spanning 10 embedding models, 3 rerankers, and 17 language models.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Soft Sensor for Bottom-Hole Pressure Estimation in Petroleum Wells Using Long Short-Term Memory and Transfer Learning</div>
-<div class="meta-line">Authors: M. A. Fernandes, E. Gildin, M. A. Sampaio</div>
-<div class="meta-line">First: 2026-02-03T16:56:21+00:00 · Latest: 2026-10-14T19:44:18+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2602.03737v2">Abs</a> · <a href="https://arxiv.org/pdf/2602.03737v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Monitoring bottom-hole variables in petroleum wells is essential for production optimization, safety, and emissions reduction. Permanent Downhole Gauges (PDGs) provide real-time pressure data but face reliability and cost issues. We propose a machine learning-based soft sensor to estimate flowing Bottom-Hole Pressure (BHP) using wellhead and topside measurements. A Long Short-Term Memory (LSTM) model is introduced and compared with Multi-Layer Perceptron (MLP) and Ridge Regression. We also pioneer Transfer Learning for adapting models across operational environments. Tested on real offshore datasets from Brazil&#x27;s Pre-salt basin, the methodology achieved Mean Absolute Percentage Error (MAPE) consistently below 2\%, outperforming benchmarks. This work offers a cost-effective, accurate alternative to physical sensors, with broad applicability across diverse reservoir and flow conditions.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Monitoring bottom-hole variables in petroleum wells is essential for production optimization, safety, and emissions reduction.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Wolof-Adapted Industry-Ready Open-Weight Language Models</div>
-<div class="meta-line">Authors: Gwénolé Lecorvé, Delphine Charlet, Pierre Adam, Floriane Behanzin, Lionel Delphin-Poulat, Johannes Heinecke, Géraldine Damnati, Pelin Kaytmaz, Nourredine Khaous, Charbel Kindji, Meriam Maadi, Abdoulaye Mbaye, Claire Perroux, Ismaël Rousseau, Papa Séga Wadé, Gilles Xiberras, Olivier Zhang, Malek Zitouni</div>
-<div class="meta-line">First: 2026-10-14T19:10:23+00:00 · Latest: 2026-10-14T19:10:23+00:00</div>
-<div class="meta-line">Comments: 6 + 47 pages (main + appendices), 27 tables, 1 figure</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.20824v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.20824v1">PDF</a> · <a href="https://huggingface.co/collections/Orange/wolof-lm">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Wolof is spoken by 23M people, mostly in Senegal, but remains weakly supported by open-weight language models, while API models raise cost, governance, and sovereignty constraints for local deployments. In this paper, we present 0.6B-14B open-weight models adapted to Wolof through instruction tuning, preference alignment, and model merging. After presenting the pipeline and data, extensive experiments on 63~public and in-house tasks show good performance on Wolof understanding and generation while remaining effective on other languages and cross-lingual skills, with the 8B and 14B models being particularly competitive with substantially larger commercial systems. The models are currently being evaluated in internal customer-care pilots and are publicly available at https://huggingface.co/collections/Orange/wolof-lm .</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Wolof is spoken by 23M people, mostly in Senegal, but remains weakly supported by open-weight language models, while API models raise cost, governance, and sovereignty constraints for local deployments.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">RRM-GPT: A Framework and Vision for Radio Resource Management Foundation Models</div>
-<div class="meta-line">Authors: Ahmed Aboulfotouh, Akram Bin Sediq, Koosha Pourtahmasi Roshandeh, Omar Mashaal, Ahmad M. Nagib, Jale Sadreddini, Hatem Abou-Zeid</div>
-<div class="meta-line">First: 2026-10-03T05:04:46+00:00 · Latest: 2026-10-14T16:43:17+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.04296v2">Abs</a> · <a href="https://arxiv.org/pdf/2610.04296v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Learning-based models for radio resource management (RRM) are typically built for a single function and deployment, so each new setting repeats the development pipeline. RRM decisions, however, share a common structure: each is assembled from interdependent fields, defined by the standard, whose values are selected in view of the network state. We propose RRM-GPT, an autoregressive framework for RRM foundation models that generate these decisions as a language model generates text. An encoder maps heterogeneous network observations into a common token representation, and a decoder emits the decision one field at a time, each conditioned on the network state and the fields already committed. Pretraining on unannotated network logs teaches the model what makes a decision valid and how controllers choose among valid decisions; post-training then adapts it to deployment-specific operator objectives through imitation or reinforcement learning. The framework targets two forms of reuse: a function-specific model reused across deployments, and a model shared across RRM functions that generates their interdependent decisions as one sequence. In a 5G New Radio (NR) case study, we demonstrate that a single model generates complete scheduling grants spanning user selection, timing, link adaptation, resource allocation, and control signaling. The model captures dependencies among grant fields and transfers learned behavior to an unseen scenario without adaptation.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Learning-based models for radio resource management (RRM) are typically built for a single function and deployment, so each new setting repeats the development pipeline.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Causal Syntax Circuits in CodeLMs: Budget and Probe Decide What Looks Localised</div>
-<div class="meta-line">Authors: Harsh Kumar, Tanmay Shailesh Joshi, Rahul Maity, Anusa Saha</div>
-<div class="meta-line">Venue: NeurIPS 2026</div>
-<div class="meta-line">First: 2026-10-14T16:31:03+00:00 · Latest: 2026-10-14T16:31:03+00:00</div>
-<div class="meta-line">Comments: Accepted at the NeurIPS 2026 Workshop on Linguistic Principles for Foundation Models (LP4FM). All four authors contributed equally</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.20683v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.20683v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Code models write Python when the prompt does not say which language to use. We ask a mechanistic question about that habit: is it produced by a small, findable group of components inside the model? We run one pipeline---mean ablation, activation patching, greedy circuit extraction, a random-control significance test, and activation steering---over 55 model-language settings spanning ten open code models (five base and five instruction-tuned), three target languages (Rust, C#, PHP), two prompt suites, and two component budgets. We report five findings. First, the preference is large, grows with model size, and survives instruction tuning: it is larger on every instruction-tuned checkpoint than on its base version, by 12% on average. Second, its measured size is mostly a property of the probe; replacing our aligned prompts with XLCoST parallel functions takes the same measurement on the same models from about 1.6 to about 0.01. Third, whether the preference looks localised depends on how many components the search may keep: with a budget of 12, 1 of 15 settings yields a circuit that beats size-matched random controls after multiple-comparison correction, and with a budget of 40, 6 of 15 do. Fourth, interventions that a smaller-budget study reports as uniformly failing do sometimes succeed: patching makes a Python prompt prefer target syntax in 2 of 45 settings, and steering changes the most likely next token in 9 of 45. Fifth, every circuit whose effect is significant but points away from the target language comes from a setting where circuit extraction failed, which makes such results a diagnostic rather than a phenomenon. The practical lesson is that a claim about whether a behaviour is localised can turn on analysis choices that papers rarely report. We release the full grid so those choices can be varied.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Code models write Python when the prompt does not say which language to use.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Argument Graph Uncertainty: Quantifying Uncertainty from the Logical Structure of Reasoning Chains</div>
-<div class="meta-line">Authors: Simon Baur, Sumire Honda, Wojciech Samek, Jackie Ma</div>
-<div class="meta-line">First: 2026-10-14T15:13:00+00:00 · Latest: 2026-10-14T15:13:00+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.20328v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.20328v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Reliable uncertainty estimation is essential for deploying large language models in high-stakes reasoning tasks, yet most existing approaches rely on expensive sampling strategies or shallow token-level signals that ignore the internal logical structure of model outputs. We introduce Argument Graph Uncertainty, a post-hoc framework for multiple choice question tasks, that estimates model confidence directly from the logical structure of a single chain-of-thought reasoning trace. Our method uses either a lightweight instruction-tuned model or a simple deterministic rule to segment the reasoning chain into propositional units, then applies a NLI model to infer relational edges and construct two complementary argument graphs over these segments. The resulting edge scores are aggregated into a Dirichlet posterior over answer options, whose concentration yields calibrated uncertainty estimates reflecting both local step-to-step coherence and global logical consistency across the reasoning trace. Evaluated on GPQA, MMLU-Pro and TruthfulQA, our method consistently surpasses token-based and consistency-based uncertainty baselines across multiple reasoning models. We further demonstrate through extensive combination analyses that argument graph uncertainty captures an orthogonal signal to existing approaches, making it a complementary component in uncertainty ensembles. Crucially, our framework requires no additional calls to the evaluated model and relies entirely on small, efficient auxiliary models, producing fully interpretable, per-node uncertainty attributions at low computational cost.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Reliable uncertainty estimation is essential for deploying large language models in high-stakes reasoning tasks, yet most existing approaches rely on expensive sampling strategies or shallow token-level signals that ignore the internal logical structure of model outputs.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">HEM-Med: A Hierarchical Agentic Memory Framework for Safe Multi-Center Medication Recommendation</div>
-<div class="meta-line">Authors: Min Xiao, Jin Li, Shoujin Wang, Yeguang Zhen, Yishuo Li, Wenpeng Lu</div>
-<div class="meta-line">First: 2026-10-14T13:39:34+00:00 · Latest: 2026-10-14T13:39:34+00:00</div>
-<div class="meta-line">Comments: BIBM 2026</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.20191v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.20191v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Medication recommendation (MR) is critical for clinical decision support. While existing MR methods are mostly designed for single-center learning, where only one independent hospital is involved, multi-center MR with hospitals of different scales has become increasingly demanding in practice. In multi center settings, abundant data from large medical centers can improve recommendation performance for low-resource centers. Despite a few preliminary attempts on this task, two critical gaps remain. Gap 1: Existing multi-center methods fail to disentangle transferable cross-hospital clinical experience from hospital-specific prescribing patterns, limiting clinical feasibility and physician acceptance. Gap 2: They commonly overlook multi label safety constraints of MR, including drug-drug interaction risks and local formulary feasibility, which are essential for safe real-world deployment. To address these gaps, we propose HEM-Med, a novel hierarchical agentic memory framework for multi-center MR. To address Gap 1, we design a disentangled hierarchical memory module that builds patient-level medication context attribution records and disentangles them into cross hospital experience memory and hospital-specific residual memory. To address Gap 2, we introduce a safety-aware medication set generation module, which integrates dual-level experience retrieval with safety-aware set decoding to produce clinically relevant, safer, and locally adaptive medication recommendations. Experiments on a real-world multi-center eICU dataset show that HEM-Med outperforms representative transfer learning, LLM-based, and MR baselines in terms of both recommendation accuracy and safety.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Medication recommendation (MR) is critical for clinical decision support.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Task-Driven Subspace Decomposition for Knowledge Sharing and Isolation in LoRA-based Continual Learning</div>
-<div class="meta-line">Authors: Lingfeng He, De Cheng, Huaijie Wang, Xi Yang, Nannan Wang, Xinbo Gao</div>
-<div class="meta-line">Venue: ICML 2026</div>
-<div class="meta-line">First: 2026-02-27T02:31:00+00:00 · Latest: 2026-10-14T08:43:34+00:00</div>
-<div class="meta-line">Comments: Accepted by ICML 2026</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2603.00191v5">Abs</a> · <a href="https://arxiv.org/pdf/2603.00191v5">PDF</a> · <a href="https://github.com/HHHLF/LoDA_ICML2026">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Continual Learning (CL) requires models to sequentially adapt to new tasks without forgetting old knowledge. Recently, Low-Rank Adaptation (LoRA), a representative Parameter-Efficient Fine-Tuning (PEFT) method, has gained increasing attention in CL. Several LoRA-based CL methods reduce interference across tasks by separating their update spaces, typically building the new space from the estimated null space of past tasks. However, they (i) overlook task-shared directions, which suppresses knowledge transfer, and (ii) fail to capture truly effective task-specific directions since these ``null bases&quot; of old tasks can remain nearly inactive for new task under correlated tasks. To address this, we study LoRA learning capability from a projection energy perspective, and propose Low-rank Decomposition and Adaptation (LoDA). It performs a task-driven decomposition to build general and truly task-specific LoRA subspaces by solving two energy-based objectives, decoupling directions for knowledge sharing and isolation. LoDA fixes LoRA down-projections on two subspaces and learns robust up-projections via a Gradient-Aligned Optimization (GAO) approach. After each task, before integrating the LoRA updates into the backbone, LoDA derives a closed-form recalibration for the general update, approximating a feature-level joint optimum along this task-shared direction. Experiments indicate that LoDA outperforms existing CL methods. Our code is available at https://github.com/HHHLF/LoDA_ICML2026.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Continual Learning (CL) requires models to sequentially adapt to new tasks without forgetting old knowledge.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">ProtModernBERT: Compute-Efficient Protein Language Modeling</div>
-<div class="meta-line">Authors: Alberto Martínez, Natalia Flechas Manrique, Llorenç Espinosa-Portalés, Luc Andrea</div>
-<div class="meta-line">First: 2026-10-14T07:59:49+00:00 · Latest: 2026-10-14T07:59:49+00:00</div>
-<div class="meta-line">Comments: 12 pages, 5 figures</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.19738v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.19738v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Large protein language models provide a powerful framework for learning sequence-function relationships and guiding experimental design. However, architectural improvements are underexplored, especially in low-compute regimes of relevance for resource-constrained research laboratories. We show that the training cost for encoder-only transformer architectures can be reduced by leveraging modern architectural refinements, offering an encouraging performance / compute-efficiency trade-off. We introduce ProtModernBERT, a modernized BERT-style model pre-trained on amino acid sequences, and compare it with ProtBert, Amplify, and ESM2 across a set of supervised structural tasks -encompassing secondary structure prediction, disorder prediction, and subcellular localization- and ProteinGym&#x27;s zero-shot functional benchmark. We find that ProtModernBERT matches or closely tracks the performance of Amplify-120M and ProtBert with up to 80-90\% reduction in pre-training FLOPs, and narrows the gap to ESM2 when controlling for pre-training. Our analysis using a cluster-based validation protocol for hyperparameter selection and randomly initialized models disentangles the contributions of architecture and data, showing that modern components provide stronger inductive biases that are more consequential than parameter count in low-compute regimes.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Large protein language models provide a powerful framework for learning sequence-function relationships and guiding experimental design.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">ReGRA: Residual-Gradient Adaptation for Complementary Low-Rank Fine-Tuning</div>
-<div class="meta-line">Authors: Fanyao Li, Yuxi Liu, Xiaohao Liu, He Chang, Zhaoxin Wang, Zhulin Tao</div>
-<div class="meta-line">First: 2026-10-14T07:23:50+00:00 · Latest: 2026-10-14T07:23:50+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.19700v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.19700v1">PDF</a> · <a href="https://github.com/Fanyao-Li/ReGRA">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Low-rank adaptation (LoRA) enables parameter-efficient fine-tuning by learning low-rank weight updates. Increasing rank expands adaptation capacity, but does not guarantee that all learned directions improve downstream performance. In a diagnostic experiment with rank-16 LoRA, we show that retaining only the top singular components achieves the best performance, whereas adding further components degrades it. Motivated by this, we propose Residual-Gradient Adaptation (ReGRA), a two-stage method for making more effective use of a fixed rank budget. After the first stage, ReGRA estimates task gradients on a calibration set and removes their projections onto the two-sided subspace induced by the first-stage update. It then aggregates the residual-gradient directions to initialize a second-stage adapter without changing the first-stage update. An orthogonality regularizer encourages the two updates to capture complementary directions. Both updates can be merged into the pretrained weights, incurring no additional inference overhead. Across diverse benchmark sets, ReGRA achieves stronger performance than alternatives with the same total rank and even matches LoRA adapters with twice the rank. Ablation studies and further analysis support the contribution of its core design choices. Code is available at https://github.com/Fanyao-Li/ReGRA.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Low-rank adaptation (LoRA) enables parameter-efficient fine-tuning by learning low-rank weight updates.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Divergent Paths: Learning an Outcome-Predictive Representation of LLM Agent Trajectories</div>
-<div class="meta-line">Authors: Alexander Gill, Guram Gogia, Francisco Guzmán</div>
-<div class="meta-line">First: 2026-10-14T05:36:22+00:00 · Latest: 2026-10-14T05:36:22+00:00</div>
-<div class="meta-line">Comments: 9 pages, 8 pages appendix</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.19614v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.19614v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">In this work, we reframe agentic trajectories as paths through a shared embedding space of actions and environmental observations. We show that successful and failed rollouts of the same task separate in this space, with simple per-task discriminators predicting held-out rollout outcomes at up to 0.95 AUROC across three agent benchmarks and three policy models. To exploit this signal across tasks, we introduce Precog-RM, a transformer-based model that meta-learns a representation in which outcome prediction can be performed in a few-shot setting. We show that Precog-RM generalizes to unseen tasks and models, and gives confident predictions of trajectory success long before termination. Deployed as an early stopping controller for Group Relative Policy Optimization (GRPO) on Tau2-Bench, Precog-RM cuts training FLOPs by up to 47.3\% while maintaining performance comparable to baseline GRPO.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">In this work, we reframe agentic trajectories as paths through a shared embedding space of actions and environmental observations.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">InstructPro2: Natural Language and Biological Grounding Guided De Novo Protein Design</div>
-<div class="meta-line">Authors: Charles Novak, Zhenqiao Song, Chuan Li, Jianwen Xie, Lei Li</div>
-<div class="meta-line">First: 2026-10-14T05:09:19+00:00 · Latest: 2026-10-14T05:09:19+00:00</div>
-<div class="meta-line">Comments: 19 pages, 6 figures</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.19592v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.19592v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">The ability to generate proteins with desired functions is a central goal of computational biology. Although natural language can express diverse design objectives, existing protein generation methods often support only narrow tasks or make limited use of biological constraints. We develop InstructPro2 to translate natural-language design objectives into protein sequences while incorporating task-specific biological context. A text encoder captures the design instructions, while dedicated ligand and antigen encoders provide biological context to the sequence-generating decoder. For pretraining, we assemble InstructPro2Bench, comprising 205.7 million &lt;function description, protein&gt; pairs from UniProtKB. We subsequently adapt the model to ligand-binding protein and antibody design. On functional protein generation benchmarks, InstructPro2 outperforms Pinal, the strongest baseline, achieving a functional recovery F1 of 74.8 versus 62.2 and lowering global RMSD from 5.33A to 3.04A. For antibody design, the model obtains a DockQ score of 0.39, while ligand-binding protein design reaches a docking success rate of 72.6%. These findings highlight how integrating language-based instructions with biological conditioning can extend protein generation to distinct design settings.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">The ability to generate proteins with desired functions is a central goal of computational biology.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">The Instability of Safety: How Random Seeds and Temperature Expose Inconsistent LLM Refusal Behavior</div>
-<div class="meta-line">Authors: Erik Larsen</div>
-<div class="meta-line">First: 2025-12-12T22:29:13+00:00 · Latest: 2026-10-14T02:11:31+00:00</div>
-<div class="meta-line">Comments: 17 pages, 7 figures, 9 tables. Code and data: https://github.com/erikl2/safety-refusal-stability . v4: no reported numbers change. The Claude 3.5 Haiku judge ran at temperature 1.0, not 0.0 (Table 9); at t=0.0, at least 9 of Qwen 2.5&#x27;s 81 flips are judge noise, so t=0.0 flip rates include judge noise (Secs. 4.3.1, 5.2); a flip is now defined as any REFUSE/PARTIAL/COMPLY label change</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2512.12066v4">Abs</a> · <a href="https://arxiv.org/pdf/2512.12066v4">PDF</a> · <a href="https://github.com/erikl2/safety-refusal-stability">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Current safety evaluations of large language models rely on single-shot testing, implicitly assuming that model responses are deterministic and representative of the model&#x27;s safety alignment. We challenge this assumption by investigating the stability of safety refusal decisions across random seeds and temperature settings. Testing four instruction-tuned models from three families (Llama 3.1 8B, Qwen 2.5 7B, Qwen 3 8B, Gemma 3 12B) on 876 harmful prompts across 20 sampling configurations (4 temperatures x 5 seeds), we find that 18-28% of prompts exhibit decision flips (the REFUSE/PARTIAL/COMPLY label changes across configurations), depending on the model. Our Safety Stability Index (SSI) reveals that higher temperatures significantly reduce decision stability (Friedman chi-squared = 396.81, p &lt; 0.001), with mean within-temperature SSI dropping from 0.977 at temperature 0.0 to 0.942 at temperature 1.0. We validate findings across all model families using Claude 3.5 Haiku as a unified external judge, achieving 89.1% inter-judge agreement with the Llama 70B judge on the two models both judges labeled (Cohen&#x27;s kappa = 0.62). Within each model, prompts with higher compliance rates exhibit lower stability (Spearman rho = -0.47 to -0.70, all p &lt; 0.001), indicating that models &quot;waver&quot; more on borderline requests. These findings demonstrate that single-shot safety evaluations are insufficient for reliable safety assessment and that evaluation protocols must account for stochastic variation in model behavior. For Llama 3.1 8B, single-shot evaluation agrees with multi-sample ground truth only 92.5% of the time when pooling across temperatures (98.7% at greedy to 90.3% at temperature 1.0), and we recommend scaling samples with temperature--one at greedy, three at low temperature, more at higher temperatures (where three reach only ~95%), and ten when pooling--rather than a single flat threshold.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Current safety evaluations of large language models rely on single-shot testing, implicitly assuming that model responses are deterministic and representative of the model&#x27;s safety alignment.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">LLMs Can Get &quot;Brain Rot&quot;: A Pilot Study on Twitter/X</div>
-<div class="meta-line">Authors: Shuo Xing, Junyuan Hong, Yifan Wang, Runjin Chen, Zhenyu Zhang, Ananth Grama, Zhengzhong Tu, Zhangyang Wang</div>
-<div class="meta-line">First: 2025-10-15T13:28:49+00:00 · Latest: 2026-10-14T01:11:53+00:00</div>
-<div class="meta-line">Comments: Published at COLM 2026</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2510.13928v3">Abs</a> · <a href="https://arxiv.org/pdf/2510.13928v3">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">We propose and test the LLM Brain Rot Hypothesis: continual exposure to junk web text induces lasting cognitive decline in large language models (LLMs). To unveil junk effects, we designed a novel controlled experiment on real Twitter/X corpora, by constructing junk and reverse-controlled datasets via two orthogonal operationalizations: M1 (engagement degree) and M2 (semantic quality), with matched token scale and training operations across conditions. Compared to the control group, continual pre-training of 4 LLMs on the junk dataset causes non-trivial declines (Hedges&#x27; g&gt;0.3) on reasoning, long-context understanding, safety, and inflating &quot;dark traits&quot; (e.g., psychopathy, narcissism). The gradual mixtures of junk and control datasets also yield dose-response cognition decay: for example, under M1, ARC-Challenge with Chain-of-Thought drops 72.1 -&gt; 57.2 and RULER-CWE 83.7 -&gt; 52.3 as junk ratio rises from 0% to 100%.
-  Error forensics reveal several key insights. First, we identify thought-skipping as the primary lesion in reasoning: models increasingly truncate or skip chains. Second, partial but incomplete healing is observed: scaling instruction tuning and clean continual pre-training improve the declined cognition, yet cannot restore baseline capability, suggesting persistent representational drift rather than format mismatch. Finally, we discover that the popularity, a non-semantic metric, of a tweet is a better indicator of the Brain Rot effect than the length in M1. Together, the results provide significant, multi-perspective evidence that social effects of data could be a causal driver of LLM capability decay in continual pre-training, thereby motivating routine &quot;cognitive health checks&quot; for deployed and evolving LLMs.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">We propose and test the LLM Brain Rot Hypothesis: continual exposure to junk web text induces lasting cognitive decline in large language models (LLMs).</div>
-</details>
 </div></div>
     <details style="margin-top:16px" class="detail"><summary>History</summary>
-      <div class="history-list"><a href="archive/20261018_0509.html">20261018_0509</a>
+      <div class="history-list"><a href="archive/20261019_0511.html">20261019_0511</a>
+<a href="archive/20261018_0509.html">20261018_0509</a>
 <a href="archive/20261017_0550.html">20261017_0550</a>
 <a href="archive/20261016_0552.html">20261016_0552</a>
 <a href="archive/20261015_0559.html">20261015_0559</a>
