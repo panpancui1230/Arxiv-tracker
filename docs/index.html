@@ -74,12 +74,105 @@ summary{cursor:pointer;color:var(--acc)}
   <button class="btn" onclick="__expandAll(false)">Collapse All</button>
 </div>
 
-        <span class="badge">2026-11-02 06:31</span>
+        <span class="badge">2026-11-03 09:25</span>
       </div>
     </div>
     <div class="hr"></div>
     <div>Latest digest</div>
     <div class="row"><div class="card">
+<div class="title">Instruction-Tuning Open-Weight Language Models for BPMN Model Generation</div>
+<div class="meta-line">Authors: Gökberk Çelikmasat, Atay Özgövde, Fatma Başak Aydemir</div>
+<div class="meta-line">First: 2025-12-12T22:07:51+00:00 · Latest: 2026-10-30T17:52:09+00:00</div>
+<div class="meta-line">Comments: Preprint. Under preparation for journal submission</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2512.12063v2">Abs</a> · <a href="https://arxiv.org/pdf/2512.12063v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Domain models are central to software engineering, as they enable a shared understanding, guide implementation, and support automated analyses and model-driven development. Yet, despite these benefits, practitioners often skip modeling because it is time-consuming and demands scarce expertise. We address this barrier by investigating whether open-weight large language models, adapted via instruction tuning, can generate high-quality BPMN process models directly from natural language descriptions in a cost-effective and privacy-preserving way. We introduce InstruBPM, a reproducible approach that prepares paired text-diagram data and instruction tunes an open source large language model with parameter-efficient fine-tuning and quantization for on-prem deployment. We evaluate the tuned model through complementary perspectives: (i) text/code similarity using BLEU, ROUGE-L, and METEOR, (ii) structural fidelity using Relative Graph Edit Distance, (iii) guidelines conformance using external tool checks, and (iv) a small expert review. Using a curated subset of a multi-domain BPMN dataset, we compare the tuned model with untuned open-weight baselines and strong proprietary models under consistent prompting regimes. Our compact tuned model outperforms all baselines across sequence and structural metrics while requiring substantially fewer resources; guideline analysis and expert feedback further indicate that the generated diagrams largely follow BPMN best practices and are useful starting points that reduce modeling effort. Overall, instruction tuning improves structural accuracy and robustness compared to untuned baselines and reduces reliance on heavy prompt scaffolding. We publicly share the trained models and scripts to support reproducibility and further research.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Domain models are central to software engineering, as they enable a shared understanding, guide implementation, and support automated analyses and model-driven development.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Exploring Bad Minima in Transfer Learning</div>
+<div class="meta-line">Authors: Mina Remeli</div>
+<div class="meta-line">First: 2026-10-30T14:34:49+00:00 · Latest: 2026-10-30T14:34:49+00:00</div>
+<div class="meta-line">Comments: 57 pages, 13 figures, 3 tables. MPhil thesis, University of Cambridge, 2022. Supervised by Ferenc Huszár</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.41807v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.41807v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Transfer learning is a highly successful learning paradigm in deep learning which leverages knowledge from one task and applies it to another. Despite its success, the necessary conditions for knowledge transfer are unclear and require further research. In this dissertation, our aim is to understand transferability a little better by answering the following question: Does good generalization on a source task necessarily imply transferability to a related target task? We hypothesize the answer is negative, and attempt to find counterexamples via adversarial attacks on the transfer learning procedure. Over three types of adversarial attacks, our empirical results show a strong relationship between generalization on the source task and transferability. These results do not rule out generalization on the source task as a sufficient condition for successful transfer.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Transfer learning is a highly successful learning paradigm in deep learning which leverages knowledge from one task and applies it to another.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Breaking Information Islands in Sparse Tuning via Small-World Connectivity</div>
+<div class="meta-line">Authors: Xianchao Guan, Zijun Xiong, Yifeng Wang, Yubo Cui, Yaowei Wang, Guo-Sen Xie, Xin Li, Zheng Zhang</div>
+<div class="meta-line">Venue: NeurIPS 2026</div>
+<div class="meta-line">First: 2026-10-30T12:35:08+00:00 · Latest: 2026-10-30T12:35:08+00:00</div>
+<div class="meta-line">Comments: Accepted at NeurIPS 2026. 23 pages, 6 figures</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.41665v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.41665v1">PDF</a> · <a href="https://github.com/xianchaoguan/SWIFT">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Sparse tuning is widely used to adapt large language models due to its parameter efficiency. However, its effectiveness depends not only on the number of trainable parameters, but also on the feature-interaction topology of the sparse update&#x27;s structural support. Limited or uneven connectivity in this support may isolate subsets of feature dimensions, forming information islands that restrict direct task-specific interactions through the trainable update. To address this issue, we propose Small-World Induced Fine-Tuning (SWIFT), a sparse tuning framework inspired by small-world connectivity. SWIFT combines block-diagonal sparse updates for local feature mixing with a fixed deterministic scattering permutation that routes the mixed outputs across feature groups without additional trainable parameters. We further show theoretically that certain random sparse-update models and block-diagonal updates can exhibit information islands, whereas a sufficiently scattering permutation guarantees positive block-level expansion when the trainable block-diagonal factor consists of equal-sized, structurally dense square blocks. Extensive experiments on commonsense reasoning, natural language generation, and image classification demonstrate that SWIFT outperforms the evaluated parameter-efficient fine-tuning (PEFT) baselines on average and can match or surpass full fine-tuning. Implementation is available at https://github.com/xianchaoguan/SWIFT</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Sparse tuning is widely used to adapt large language models due to its parameter efficiency.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Enhancing Sentiment Classification on Small Datasets through Data Augmentation and Transfer Learning</div>
+<div class="meta-line">Authors: Mahmoud S. Mayaleh, Samer A. Mayaleh</div>
+<div class="meta-line">Venue: Discover Artificial Intelligence 6 (2026) 127</div>
+<div class="meta-line">First: 2026-10-30T10:08:46+00:00 · Latest: 2026-10-30T10:08:46+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.41518v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.41518v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Small-scale sentiment classification often suffers from data scarcity, which limits the generalization ability of the models. This study evaluates and compares the effectiveness of three data augmentation strategies: Easy Data Augmentation (EDA), back-translation, and contextual token substitution (nlpaug-style), with both traditional machine learning classifiers (Logistic Regression, Random Forest) and transformer-based models (BERT). We perform a comprehensive empirical comparison with low-resource sentiment datasets by summarizing the results of recent studies and performing targeted head-to-head experiments. Our findings indicate that all augmentation methods improve performance. Contextual augmentation yields the most consistent gains for BERT models, while EDA and back-translation provide greater benefits for traditional classifiers. These insights help guide the selection of data augmentation techniques tailored to model type and dataset size, filling a critical gap in research on data augmentation for sentiment classification on small datasets.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Small-scale sentiment classification often suffers from data scarcity, which limits the generalization ability of the models.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">LLINBO: Trustworthy LLM-in-the-Loop Bayesian Optimization</div>
+<div class="meta-line">Authors: Chih-Yu Chang, Milad Azvar, Chinedum Okwudire, Raed Al Kontar</div>
+<div class="meta-line">First: 2025-05-20T15:54:48+00:00 · Latest: 2026-10-29T23:20:28+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2505.14756v3">Abs</a> · <a href="https://arxiv.org/pdf/2505.14756v3">PDF</a> · <a href="https://github.com/UMDataScienceLab/LLM-in-the-Loop-BO">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Bayesian optimization (BO) is a sequential decision-making tool widely used for optimizing expensive black-box functions. Recently, Large Language Models (LLMs) have shown remarkable adaptability in low-data regimes, making them promising tools for black-box optimization by leveraging contextual knowledge to propose high-quality query points. However, LLMs lack explicit surrogate modeling and calibrated uncertainty, and their internal mechanisms remain opaque. This structural opacity can result in unnecessary experiments, which are costly in BO and may prevent the search from approaching the optimum. To address this, we propose LLINBO: LLM-in-the-Loop BO, a general framework that wraps existing LLM-based BO approaches, deciding when and how to act on their suggestions and when to revert to classical BO. We introduce three mechanisms for this interaction, each accompanied by a no-harm theoretical guarantee that ensures sublinear cumulative regret for common kernels while requiring no performance assumptions on the LLM. Beyond these theoretical guarantees, we show through simulation studies that LLINBO makes existing LLM-based BO more reliable while still exploiting the LLM&#x27;s few-shot learning ability to outperform classical BO. We further demonstrate its practical use on a real-world, expensive 3D printing experiment. Code is available at https://github.com/UMDataScienceLab/LLM-in-the-Loop-BO.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Bayesian optimization (BO) is a sequential decision-making tool widely used for optimizing expensive black-box functions.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Table Serialization Determines Which Relations Language Models Preserve</div>
+<div class="meta-line">Authors: Junwei Ma, Arun Kumar Chithanar, Palash Goyal, Chul Lee</div>
+<div class="meta-line">First: 2026-10-17T18:07:24+00:00 · Latest: 2026-10-29T22:30:05+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.24798v2">Abs</a> · <a href="https://arxiv.org/pdf/2610.24798v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">We study how text serialization affects table lookup in instruction-tuned language models. Our diagnostic asks the model to find the row containing a specified value under one named column, then return the value under another named column in that same row. We render the same synthetic 256-cell tables in row-major form and in column-major form with each header placed beside its values, while varying the table aspect ratio across five shapes. Across three models, the better format changes with table shape: row-major performs better on tall tables, whereas column-major performs better on wide tables. At 64 x 4, row-major leads by 42.3-54.0 percentage points; at 4 x 64, column-major leads by 35.0-59.0 points. Mapping wrong answers back to their source cells reveals a complementary error pattern: row-major tends to preserve the correct row but lose the target column, while column-major tends to preserve the correct column but lose the row. We use the term relational locality to describe this pattern: serialization keeps one relation locally available while making the other depend on positional alignment. A separate non-tabular ordering experiment supports this interpretation. Thus, apparent width-related failures in text-serialized tables depend on linearization, not table shape alone.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">We study how text serialization affects table lookup in instruction-tuned language models.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Bilevel ZOFO: Efficient LLM Fine-Tuning and Meta-Training</div>
+<div class="meta-line">Authors: Reza Shirkavand, Peiran Yu, Qi He, Heng Huang</div>
+<div class="meta-line">First: 2025-02-05T20:47:44+00:00 · Latest: 2026-10-29T19:36:04+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2502.03604v4">Abs</a> · <a href="https://arxiv.org/pdf/2502.03604v4">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Fine-tuning pre-trained Large Language Models (LLMs) for downstream tasks using First-Order (FO) optimizers presents significant computational challenges. Parameter-Efficient Fine-Tuning (PEFT) methods address these by freezing most model parameters and training only a small subset. However, PEFT often underperforms compared to full fine-tuning when high task-specific accuracy is required. Zeroth-Order (ZO) methods fine-tune the entire pre-trained model without back-propagation, estimating gradients through forward passes only. While memory-efficient, ZO methods suffer from slow convergence and high sensitivity to prompt selection. We bridge these two worlds with Bilevel-ZOFO, a bilevel optimization method that couples fast, local FO-PEFT adaptation at the inner level with stable, memory-efficient ZO updates of the full backbone at the outer level. The FO-PEFT inner loop performs fast, low-memory local adaptation that reduces the variance of ZO estimates and stabilizes the search, guiding the outer ZO updates of the full backbone and reducing prompt sensitivity. In the mean time, the outer ZO provides better generalization ability for PEFT. We provide theoretical convergence guarantees and empirically demonstrate that Bilevel-ZOFO significantly outperforms existing ZO and FO-PEFT methods, achieving 2-4 times faster training while maintaining similar memory efficiency. Additionally, we show by updating the backbone with ZO and adapting only a tiny FO-PEFT block per task, Bilevel-ZOFO combines full-model capacity with few-shot efficiency, making it a very efficient meta-learning algorithm that quickly adapts to new tasks.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Fine-tuning pre-trained Large Language Models (LLMs) for downstream tasks using First-Order (FO) optimizers presents significant computational challenges.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">AutoHebb: Self-Modifying Neural Networks that Zero-Shot Infer and Continually Learn</div>
+<div class="meta-line">Authors: Daniel Levine, David van Dijk, Kenneth Kay</div>
+<div class="meta-line">First: 2026-10-29T16:57:55+00:00 · Latest: 2026-10-29T16:57:55+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.40757v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.40757v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Humans and animals have a unique capacity to generalize and learn in novel circumstances, including &quot;0-shot&quot; inference (ZI) and continual learning (CL) -- two powerful cognitive abilities. Despite this importance, efforts to model ZI and CL are seriously limited in several ways. First, existing models typically lack components critical to ZI and CL in the brain, namely, strong inductive biases (for ZI) and autonomous control of learning (for CL). Second, models can be less tractable to analysis if model components are overly complex (lacking simplicity), or too task-restricted if model components are overly bespoke (lacking expressivity). Here we introduce autonomous Hebbian networks (&quot;AutoHebb&quot;), a class of online learning feedforward neural networks that realize strong inductive biases and autonomously controlled learning, and are both simple and expressive. Unlike standard models that learn via externally controlled optimization (e.g. gradient descent), AutoHebb networks combine external feedback with internally generated activity to produce a global learning signal (&#x27;neuromodulator&#x27;) fed back to the network. The neuromodulator in turn gates a biologically grounded local learning rule (3-factor Hebbian rule) that updates networks&#x27; plastic weights. Using meta-learning to search for fixed (non-plastic) weights, we find that AutoHebb networks (1) succeed on ZI tasks, (2) show emergent (untrained) ZI/CL abilities, (3) admit reverse-engineering into explicit algorithms, and (4) outperform modern learning models on ZI/CL tasks. Lastly, performance comparisons to related models implied an essential role for three model components: meta-learning, Hebbian plasticity, and autonomous control of learning. These findings indicate that AutoHebb may be useful in hypothesis generation, analysis, and discovery of biologically grounded forms of learning and generalization.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Humans and animals have a unique capacity to generalize and learn in novel circumstances, including &quot;0-shot&quot; inference (ZI) and continual learning (CL) -- two powerful cognitive abilities.</div>
+</details>
+</div>
+<div class="card">
 <div class="title">Neighborhood Elites: Quality-Diversity Search for Uncertainty Quantification in Question Answering</div>
 <div class="meta-line">Authors: Mesut Ceylan, Arda Baris Basaran, Elgar Fleisch, Filipe Barata</div>
 <div class="meta-line">First: 2026-10-29T15:32:57+00:00 · Latest: 2026-10-29T15:32:57+00:00</div>
@@ -338,103 +431,10 @@ summary{cursor:pointer;color:var(--acc)}
 <details class="detail"><summary>Summary / 总结</summary>
 <div class="mono">The success of large language models in real-world applications relies on parameter-efficient fine-tuning methods such as Low-Rank Adaptation (LoRA), which inserts compact, trainable adapters into selected layers.</div>
 </details>
-</div>
-<div class="card">
-<div class="title">Selective Transfer Learning for Groundwater Level Anomaly Forecasting: Accuracy-Risk Trade-offs</div>
-<div class="meta-line">Authors: Yaxuan Wu, Ali Mohammed Mansoor Alsahag, Seyed Sahand Mohammadi Ziabari</div>
-<div class="meta-line">First: 2026-10-27T13:15:35+00:00 · Latest: 2026-10-27T13:15:35+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.37733v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.37733v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">This work studies context-aware selective transfer learning for multi-well groundwater anomaly forecasting in the Netherlands. Source-domain pretraining can raise average accuracy but is not uniformly reliable: it degrades performance on a substantial fraction of heterogeneous wells. Context-Aware Selective Learning (CASL) uses calibration-trained, constrained contextual blending of frozen no-transfer and fixed-transfer parents. Global Convex Blend uses the same parents with one calibration-fitted weight per seed. The corrected task requires nine consecutive observed monthly inputs and an exact three-calendar-month target, without interpolation. Evaluation covers 457 wells and 13,718 test windows under five predefined seeds, with the four-cell maxsim0.60 source pool frozen using Always-TL validation RMSE alone. Fixed transfer harms 18.38-51.86% of wells. CASL has 0.424-1.084% lower RMSE than No TL, partially rescuing 97.53-99.50% and fully rescuing 23.46-43.78% of fixed-harmed wells. Partial rescue can arise structurally from convex blending and does not establish contextual superiority. Global Convex Blend protects more wells in four seeds, while CASL has slightly lower pooled RMSE in four. Neither dominates: the results support an accuracy-risk trade-off on the fixed split, not rolling deployment validity.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">This work studies context-aware selective transfer learning for multi-well groundwater anomaly forecasting in the Netherlands.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">PubMedCausal: A Span-Level Annotated Corpus for Causal Relation Extraction in Biomedical Text</div>
-<div class="meta-line">Authors: Ifeoluwa Kunle-John, Josiah Paul, Oluwatosin Agbaakin, Peter Aina, Ikenna Odezuligbo, Sydney Anuyah</div>
-<div class="meta-line">Venue: EMNLP 2026</div>
-<div class="meta-line">First: 2026-05-27T11:59:17+00:00 · Latest: 2026-10-27T12:00:25+00:00</div>
-<div class="meta-line">Comments: Published at EMNLP 2026. 32 pages</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2605.28363v2">Abs</a> · <a href="https://arxiv.org/pdf/2605.28363v2">PDF</a> · <a href="https://github.com/josiahpaul07/PubMedCausal_Exp">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Causal relation extraction (CRE) is central to biomedical text mining, but current resources often conflate causal relations with broader associations, restrict annotation to sentence-level examples, or focus mainly on explicit causal cues. This limits their usefulness for evaluating whether models can recover causal claims as they are actually expressed in biomedical text. We introduce PubMedCausal, a span-level annotated corpus for biomedical CRE built from PubMed abstracts. The corpus contains 30,000 paragraph-level rows, including 3,945 causal rows and 6,491 adjudicated cause--effect pairs. Each causal relation is annotated with full-text cause and effect spans, causality type, and sententiality, enabling evaluation of both causal detection and full-span causal extraction. We benchmark discriminative encoders and open-source generative models across detection and extraction settings. For causal detection, biomedical encoders are strongest, with PubMedBERT reaching an F$_1$ score of 0.7391. For span-level extraction, the best generative baseline is DeepSeek-R1-32B with few-shot prompting, reaching a Cosine Pair F$_1$ of 0.6765. We further test transfer learning by evaluating PubMedCausal-trained encoders on external causal relation datasets, showing that the resource supports cross-dataset evaluation. Our results show that biomedical CRE remains difficult under class imbalance, long causal spans, implicit causality, inter-sentential relations, and prompt sensitivity. Code and Data can be found here: https://github.com/josiahpaul07/PubMedCausal_Exp</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Causal relation extraction (CRE) is central to biomedical text mining, but current resources often conflate causal relations with broader associations, restrict annotation to sentence-level examples, or focus mainly on explicit causal cues.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">On the Sparsity of Direct Preference Optimization: Weight Disentanglement in the NTK Regime</div>
-<div class="meta-line">Authors: Kensuke Sasaki, Issei Sato</div>
-<div class="meta-line">First: 2026-10-27T11:48:41+00:00 · Latest: 2026-10-27T11:48:41+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.37085v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.37085v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Direct Preference Optimization (DPO) has been widely adopted for aligning language models with human preferences. Recent empirical work has revealed that DPO induces remarkably sparse parameter updates, yet no theoretical explanation for this phenomenon has been offered. We analyze DPO&#x27;s optimization dynamics under a neural tangent kernel linearization and show that the logistic structure of the DPO loss gives rise to an implicit maximum-margin bias. Building on this observation, we introduce the concept of dual sparsity: the DPO update direction is a sparse linear combination (data-level sparsity, driven by support vectors) of sparse gradient feature vectors (parameter-level sparsity, arising from gradient cancellation between preferred and dispreferred responses). We formalize this structure in our main theorem, bound the number of support pairs by a margin-dependent spectral quantity, and present a framework relating dual sparsity to weight disentanglement---a condition favorable for model merging. Experiments on GPT-2 Small and Medium and on 7--9B instruction-tuned models (Llama-3-8B, Mistral-7B, Gemma-2-9B) with the Anthropic HH-RLHF and UltraFeedback datasets confirm both sources of sparsity, and experiments on GPT-2 show that DPO reduces cross-task interference by up to $35{\times}$ compared to supervised fine-tuning.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Direct Preference Optimization (DPO) has been widely adopted for aligning language models with human preferences.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Hierarchical Low-Rank Reparameterization for Parameter-Efficient Fine-Tuning</div>
-<div class="meta-line">Authors: Rong Huang, Yi Xiong, Yuan-Yuan Cheng, Xiao-Ming Fu</div>
-<div class="meta-line">First: 2026-10-27T11:34:03+00:00 · Latest: 2026-10-27T11:34:03+00:00</div>
-<div class="meta-line">Comments: 14 pages, 2 figures, 10 tables, including references and appendices</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.37068v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.37068v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Parameter-efficient fine-tuning (PEFT) methods adapt large models by introducing a small number of trainable parameters. However, we find that these parameters still contain redundancy and can be further compressed while maintaining strong task performance. To this end, we propose a novel hierarchical low-rank reparameterization method. Its core idea is to reorganize the trainable parameters of PEFT methods into an approximately square matrix and then express it via a low-rank decomposition, which can be applied recursively. This forms a multi-level structure with factors compressed level by level, drastically reducing the number of trainable parameters. In our experiments, we combine this reparameterization with LoRA, DoRA, MoSA, and RaSA. We evaluate commonsense reasoning on LLaMA-3.1-8B and Qwen2.5-7B, with additional GSM8K math reasoning experiments on LLaMA-3.1-8B. Under comparable trainable-parameter budgets, our method combined with LoRA or DoRA achieves better performance. Furthermore,when the parameter count of the original methods is compressed by approximately an order of magnitude, our method can still maintain competitive task performance and even surpass the corresponding baselines in average accuracy across the eight commonsense reasoning benchmarks.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Parameter-efficient fine-tuning (PEFT) methods adapt large models by introducing a small number of trainable parameters.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Interpretable Deep Learning Models for Breast Cancer Diagnosis Using Medical Imaging</div>
-<div class="meta-line">Authors: Sami Alnawali, Muhammad Atif Saeed, Abdul Hadi, Azka Atiq, Akhtar Jamil, Ahmad Din</div>
-<div class="meta-line">First: 2026-10-27T11:01:50+00:00 · Latest: 2026-10-27T11:01:50+00:00</div>
-<div class="meta-line">Comments: 37 page, 45 Figures</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.37026v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.37026v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Deep learning shows promise for breast cancer diagnosis, but limited interpretability hinders clinical adoption. We benchmark ten ImageNet-pretrained models (ResNet50, VGG19, InceptionV3, DenseNet121, Xception, MobileNetV2, EfficientNet, ConvNeXt, ViT, and Swin Transformer) for benign-versus-malignant classification on the BreakHis histopathology dataset using a patient-level split, and explain their predictions with Grad-CAM, LIME, Integrated Gradients, and LRP. DenseNet121 performed best, with 99.4% test accuracy and an AUC-ROC of 0.999, and significantly outperformed all other models (p &lt; 0.001). Transformer-based models trailed the CNNs. The explanations consistently highlighted nuclei-rich and glandular regions of diagnostic relevance. Combining transfer learning with explainable AI can thus yield accurate, interpretable tools for breast cancer diagnosis.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Deep learning shows promise for breast cancer diagnosis, but limited interpretability hinders clinical adoption.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">CaLLM: Continual Adaptation of LLMs via Non-Parametric Adapter Routing</div>
-<div class="meta-line">Authors: Bilge Celik, Anna Vettoruzzo, Joaquin Vanschoren</div>
-<div class="meta-line">First: 2026-10-27T10:41:56+00:00 · Latest: 2026-10-27T10:41:56+00:00</div>
-<div class="meta-line">Comments: Accepted at 5th Conference on Lifelong Learning Agents (CoLLAs), Main Conference Track, 2026</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.36994v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.36994v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Continual adaptation of large language models (LLMs) to evolving task distributions while mitigating catastrophic forgetting remains an open problem. Existing strategies often struggle to scale or lack a robust mechanism for zero-shot task-to-expert assignment. We introduce CaLLM, a framework that resolves these tensions by combining metric-based meta-learning with modular parameter isolation via lightweight adapters. First, CaLLM projects each input batch into a task-agnostic embedding space to find its nearest prototype. It then routes the batch to the specific adapter specialized for that data distribution. This formulation provides (i)~controllable cross-task interference by design, (ii)~constant computational complexity regardless of task count, (iii)~seamless integration of novel distributions through prototype expansion, and (iv)~regime agnosticism as the local routing decision enables a unified approach to both online and offline settings. Our experiments demonstrate that this routing mechanism discovers semantically coherent task groupings while facilitating constructive interference between similar tasks, and keeping overhead at a minimum. Across diverse and fine-grained continual learning benchmarks, CaLLM consistently outperforms traditional isolation and replay methods, establishing prototype-based modular routing as a principled and scalable approach to lifelong adaptation of LLMs.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Continual adaptation of large language models (LLMs) to evolving task distributions while mitigating catastrophic forgetting remains an open problem.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Manifold meta-learning for reduced-complexity neural system identification</div>
-<div class="meta-line">Authors: Marco Forgione, Ankush Chakrabarty, Dario Piga, Matteo Rufolo, Alberto Bemporad</div>
-<div class="meta-line">First: 2025-04-16T06:49:56+00:00 · Latest: 2026-10-27T08:51:11+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2504.11811v2">Abs</a> · <a href="https://arxiv.org/pdf/2504.11811v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">System identification has greatly benefited from deep learning techniques, particularly for modeling complex, nonlinear dynamical systems with partially unknown physics where traditional approaches may not be feasible. However, deep learning models often require large datasets and significant computational resources for both training and inference due to their high-dimensional parameterizations. To address this challenge, we propose a meta-learning framework that discovers a low-dimensional manifold within the parameter space of an over-parameterized neural network architecture. This manifold is learned from an abundant meta-dataset of input-output sequences generated by a simulator of the class of systems of interest, and thereafter enables efficient model training while preserving the network&#x27;s expressive power for the considered system class. Unlike bilevel meta-learning approaches, our method employs an auxiliary neural network to map datasets directly onto the learned manifold, eliminating the need for costly second-order gradient computations during meta-training and generally reducing the number of first-order updates required in inference, which could be expensive for large models. Finally, we derive a probabilistic bound that quantifies the performance gap between training on the learned low-dimensional manifold and the full parameterization. We validate our approach on a family of Bouc-Wen oscillators, which is a well-studied nonlinear system identification benchmark. We demonstrate that we are able to learn accurate models even in small-data scenarios.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">System identification has greatly benefited from deep learning techniques, particularly for modeling complex, nonlinear dynamical systems with partially unknown physics where traditional approaches may not be feasible.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Robust LLM Data Selection via Content-Invariant Gradient Attribution</div>
-<div class="meta-line">Authors: Jia Gu, Liang Pang, Huawei Shen</div>
-<div class="meta-line">First: 2026-10-27T07:12:01+00:00 · Latest: 2026-10-27T07:12:01+00:00</div>
-<div class="meta-line">Comments: 16 pages, 8 figures</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2610.36755v1">Abs</a> · <a href="https://arxiv.org/pdf/2610.36755v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Gradient-based data attribution has become an important tool for high-quality data selection in the instruction fine-tuning of large language models (LLMs), as it estimates the contribution of training examples through their influence on model optimization. However, we find that existing global gradient attribution methods suffer from surface-form bias: minor changes to semantically irrelevant details, such as wording or formatting, can produce highly inconsistent attribution scores even when the underlying content remains unchanged. To address this issue, we propose Content-Invariant Gradient Attribution (CIGA), a robust framework for instruction data selection. CIGA first identifies layers whose gradients are both influential for attribution and stable under semantics-preserving surface-form perturbations, thereby reducing formatting noise in gradient features. It then dynamically fuses these attribution signals with semantic representations of the input, combining optimization-level influence with content-level information. Extensive experiments across multiple benchmarks show that CIGA produces more stable rankings under surface-form perturbations while preserving downstream capabilities and improving average performance. CIGA also reduces attribution cost, offering a robust and efficient approach to data selection for LLM instruction tuning.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Gradient-based data attribution has become an important tool for high-quality data selection in the instruction fine-tuning of large language models (LLMs), as it estimates the contribution of training examples through their influence on model optimization.</div>
-</details>
 </div></div>
     <details style="margin-top:16px" class="detail"><summary>History</summary>
-      <div class="history-list"><a href="archive/20261101_0603.html">20261101_0603</a>
+      <div class="history-list"><a href="archive/20261102_0631.html">20261102_0631</a>
+<a href="archive/20261101_0603.html">20261101_0603</a>
 <a href="archive/20261031_0644.html">20261031_0644</a>
 <a href="archive/20261030_0703.html">20261030_0703</a>
 <a href="archive/20261029_0655.html">20261029_0655</a>
