@@ -74,12 +74,132 @@ summary{cursor:pointer;color:var(--acc)}
   <button class="btn" onclick="__expandAll(false)">Collapse All</button>
 </div>
 
-        <span class="badge">2026-11-11 07:50</span>
+        <span class="badge">2026-11-12 09:11</span>
       </div>
     </div>
     <div class="hr"></div>
     <div>Latest digest</div>
     <div class="row"><div class="card">
+<div class="title">TimeSeek: Multi-Task and Multi-Domain Pretraining for Generalized Time Series Analytics</div>
+<div class="meta-line">Authors: Peng Chen, Yihang Wang, Zhongwen Rao, Yang Shu, Yuying Qiu, Yuxuan Chen, Lujia Pan, Bin Yang, Chenjuan Guo</div>
+<div class="meta-line">First: 2026-11-10T18:49:26+00:00 · Latest: 2026-11-10T18:49:26+00:00</div>
+<div class="meta-line">Comments: Accepted by IEEE Transactions on Pattern Analysis and MachineIntelligence</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2611.14491v1">Abs</a> · <a href="https://arxiv.org/pdf/2611.14491v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Time series analytics has been widely applied across various domains. While existing time series foundation models (TSFMs) have demonstrated promising results, they still face two major challenges: 1) Most TSFMs mainly rely on stacking Transformer layers to increase parameter size, lacking the ability to adaptively model complex time series patterns from multi-domain data. 2) Current TSFMs are primarily pre-trained for specific tasks, e.g., forecasting or anomaly detection, and a few models support multiple tasks, but they fail to fully leverage task specificity and commonality, resulting in suboptimal performance. To address these challenges, we propose TimeSeek, a novel generalized time series analytics model that adaptively models time series patterns from multi-domain data and unifies multiple tasks in pre-training. Conceptually, TimeSeek is guided by selective information sharing under domain and task heterogeneity. From the perspective of multi-domain data, we propose a Multi-Domain Feature Extractor that adaptively captures temporal dependencies and channel correlations based on domain-specific characteristics, including progressive multi-scale modeling and adaptive slot channel modeling. From the perspective of the diversity of tasks, we propose multi-task collaborative training, which leverages task specificity and task commonality through task customization and cross-task training, effectively unifying multiple tasks in pre-training and better adapting to diverse downstream scenarios. After pre-training on large-scale time series data, TimeSeek achieves state-of-the-art performance in forecasting, anomaly detection, and classification tasks across both few-shot learning and zero-shot situations, together with favorable inference efficiency.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Time series analytics has been widely applied across various domains.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">DnNP: Denoising Input Uncertainty in Neural Processes</div>
+<div class="meta-line">Authors: Fatemeh Tohidian, Chengzhi Shi, Soomi Lee, Matthew Elia, Amy Mueller, Stratis Ioannidis, Jennifer Dy</div>
+<div class="meta-line">Venue: NeurIPS 2026</div>
+<div class="meta-line">First: 2026-11-10T18:00:37+00:00 · Latest: 2026-11-10T18:00:37+00:00</div>
+<div class="meta-line">Comments: Accepted at NeurIPS 2026. 20 pages, 3 figures, 3 tables. Code: https://github.com/iSUPER-ML/DnNP</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2611.14424v1">Abs</a> · <a href="https://arxiv.org/pdf/2611.14424v1">PDF</a> · <a href="https://github.com/iSUPER-ML/DnNP">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Neural Processes (NPs) are flexible meta-learning models capable of uncertainty quantification across diverse applications. However, the standard NP framework assumes access to noise-free inputs. This is unrealistic in many practical settings, where sensor noise or measurement errors are unavoidable. This discrepancy between model assumptions and real-world data can significantly degrade prediction quality and uncertainty estimates. We introduce Denoising Neural Processes (DnNPs), a principled extension of the NP framework that explicitly models input uncertainty. We train DnNPs via variational inference. DnNPs jointly learn to denoise corrupted inputs and perform meta-learning, making them robust to noisy training data. We demonstrate DnNPs&#x27; effectiveness on both synthetic and real-world datasets, showing consistent improvements in prediction and uncertainty quantification compared to standard NPs. On PM2.5 spatial interpolation from real-world air quality sensors, DnNP reduces RMSE by up to 30% and NLL by up to 73% relative to standard NPs. We also provide theoretical grounding: we show that the Bayes-optimal predictor under noisy inputs belongs to the DnNP model class, and that plug-in models with fixed observation variance incur an irreducible KL divergence gap that DnNP provably avoids.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Neural Processes (NPs) are flexible meta-learning models capable of uncertainty quantification across diverse applications.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">A Margin Perspective on LoRA: Robustness to Catastrophic Forgetting and Adapter Merging (MaLoRA)</div>
+<div class="meta-line">Authors: Ziqing Xu, Hancheng Min, Lachlan Ewen MacDonald, Salma Tarmoun, Enrique Mallada, Weijie Su, Rene Vidal</div>
+<div class="meta-line">First: 2026-11-10T17:44:14+00:00 · Latest: 2026-11-10T17:44:14+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2611.14397v1">Abs</a> · <a href="https://arxiv.org/pdf/2611.14397v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Low-rank adaptation (LoRA) is the de facto method for parameter-efficient fine-tuning of large neural networks, achieving strong task adaptation with minimal trainable parameters and low optimization cost. Beyond this efficiency, practitioners have observed two striking properties: \textit{robustness to catastrophic forgetting} and the ability to \textit{merge independently trained adapters} into a single model that performs competitively across multiple tasks. These properties are central to continual and multi-task learning, yet remain poorly understood. In this work, we provide a theoretical explanation through a unified \textit{margin-based perspective}. We analyze LoRA in multiclass linear classification under a near-orthogonal task regime with $\ell_2$-regularization, and characterize the optimal LoRA adapter across regularization regimes. Our analysis shows that, in an intermediate regime of regularization parameters, the optimal adapter aligns with the \emph{max-margin solution} on the fine-tuning data. Building on this characterization, we derive two key consequences. First, we obtain closed-form expressions for the margins on pre-training and fine-tuning data, revealing a precise margin trade-off: the regularization parameter controls the balance between retention and adaptation. Second, we analyze adapter merging, proving that merged models achieve positive margin on each task and deriving optimal mixing coefficients that balance margins across tasks and maximize the margin over their union. These results lead to a simple, training-free merging rule, which we term \textit{margin-based LoRA merging} (MaLoRA). Experiments on modern architectures and real datasets validate our theoretical predictions, showing that MaLoRA matches or outperforms several adapter-merging baselines across a range of vision and language classification tasks.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Low-rank adaptation (LoRA) is the de facto method for parameter-efficient fine-tuning of large neural networks, achieving strong task adaptation with minimal trainable parameters and low optimization cost.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Continual Instruction Tuning for LLM-ased Management of Continuum Resources</div>
+<div class="meta-line">Authors: Lanpei Li, Antonino Vaccarella, Vincenzo Lomonaco, Massimo Coppola</div>
+<div class="meta-line">First: 2026-11-06T22:43:50+00:00 · Latest: 2026-11-10T11:46:12+00:00</div>
+<div class="meta-line">Comments: Accepted at the Workshop on Research and Innovation in Scalable and Efficient Deep Learning (RISE-DL 2026), co-located with the 16th International Conference on the Internet of Things (IoT 2026), Newcastle upon Tyne, UK, November 2026. The Version of Record will appear in the ACM proceedings of IoT 2026</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2611.10292v2">Abs</a> · <a href="https://arxiv.org/pdf/2611.10292v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Large language models (LLMs) are increasingly explored for resource management across the Cloud-Edge continuum. However, embedding LLMs directly inside latency-sensitive control loops places inference latency, execution jitter, and hallucination risks on the critical path. This study argues for a different use of LLMs: a continually instruction-tuned intent compiler that runs once per management intent or declared context change, above a fast, deterministic tactical controller that handles all low-latency runtime actions. We formulate intent compilation as a continual instruction tuning problem, because management intents arrive sequentially and accumulate while infrastructure and workload contexts drift. Unlike recent LLM-based management frameworks, our design scores the model&#x27;s outputs by execution, so that catastrophic forgetting can be measured in the executed objective of the underlying controller. On a continuum simulator with a 2B backbone and parameter-efficient adapters, preliminary results show that naive sequential tuning forgets earlier intents in the executed objective, that replay of stored examples nearly prevents this forgetting, and that the tuned compact compiler performs on par with simpler translators while being more robust than a grammar parser to rephrased intents.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Large language models (LLMs) are increasingly explored for resource management across the Cloud-Edge continuum.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Conformal Risk Control for QoT-Aware Lightpath Feasibility Under Technology-Driven Domain Shift</div>
+<div class="meta-line">Authors: Kiarash Rezaei, Omran Ayoub, Paolo Monti, Carlos Natalino</div>
+<div class="meta-line">First: 2026-11-10T10:53:09+00:00 · Latest: 2026-11-10T10:53:09+00:00</div>
+<div class="meta-line">Comments: 8 pages; 4 figures; accepted for publication in the Journal of Lightwave Technology (JLT)</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2611.13893v1">Abs</a> · <a href="https://arxiv.org/pdf/2611.13893v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Artificial intelligence and machine learning (AI/ML)-based regression models support operational decision-making in optical networks but typically expose only point predictions, which carry no statistically controlled information about their reliability. This paper proposes a post-hoc conformal risk control (CRC) framework that keeps a pretrained AI/ML regressor fixed, provides a finite-sample guarantee on uncertainty band miscoverage, and maps the band to operational decisions through policy rules. The guarantee applies to interval miscoverage, while decision-error rates are evaluated empirically. We instantiate the framework for quality of transmission (QoT)-aware lightpath (LP) feasibility assessment, in which a regressor predicts optical signal-to-noise ratio (OSNR) under domain shifts caused by fiber, amplifier, and switching upgrades. Feature shift contribution scores identify the LP features whose relation to QoT changes the most across a technology transition, and two policies translate the bands into feasibility decisions, allowing operators to tune the trade-off between conservatively rejecting or aggressively accepting LP realizations. Experiments on open space-division multiplexing (SDM) QoT datasets over the CONUS topology show that, for a target coverage of 90%, the uncertainty bands meet the target in all 170 trials spanning 17 domain shifts and ten calibration-test partitions, whereas a source-only quantile regression (QR) baseline meets it in none. Under severe shifts, the efficiency-oriented (EO) policy empirically improves zero-shot (ZS) feasibility-decision accuracy from about 85% to above 99%, approaching a transfer learning (TL) policy while avoiding retraining. The framework provides finite-sample control of uncertainty band miscoverage for regression-based optical network decision support, with potential applications beyond QoT-aware LP feasibility assessment.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Artificial intelligence and machine learning (AI/ML)-based regression models support operational decision-making in optical networks but typically expose only point predictions, which carry no statistically controlled information about their reliability.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Auditing Cross-Lingual Fairness in Language Model Watermarking</div>
+<div class="meta-line">Authors: Alexander Nemecek, Osama Zafar, Debargha Ganguly, Vikash Singh, Vipin Chaudhary, Erman Ayday</div>
+<div class="meta-line">Venue: NeurIPS 2026</div>
+<div class="meta-line">First: 2026-08-20T13:48:12+00:00 · Latest: 2026-11-10T06:11:46+00:00</div>
+<div class="meta-line">Comments: Accepted at NeurIPS 2026 Evaluations &amp; Datasets Track</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2608.20047v2">Abs</a> · <a href="https://arxiv.org/pdf/2608.20047v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Watermarking schemes for large language model output are evaluated almost exclusively on English text using each scheme&#x27;s detection threshold and a narrow set of quality measurements. Multilingual deployment exposes evaluation-design choices that are inconsequential on English but determine conclusions cross-lingually. We propose an evaluation framework with four components: detection thresholds calibrated empirically per deployment context, a threshold-independent companion measurement that distinguishes calibration failures from detection failures, three disjoint quality measurement paradigms (distributional, paired-semantic, and reference-perplexity), and a generalized-entropy decomposition of cross-language disparity over a typological family partition. Applied to six watermarking schemes, three open-weight generators, eleven languages spanning four scripts and eight typological families, and both base and instruction-tuned regimes, the framework reveals failure modes that single-language, single-paradigm evaluation cannot surface. Against a shape-matched null, detection disparity is predominantly between-family on the typological partition, indicating that detection gaps are structural to language properties rather than idiosyncratic to particular languages; quality disparity is large but not reliably family-structured.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Watermarking schemes for large language model output are evaluated almost exclusively on English text using each scheme&#x27;s detection threshold and a narrow set of quality measurements.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models</div>
+<div class="meta-line">Authors: Antyabha Rahman, Akshaj Gurugubelli, Omar Ankit, Kevin Zhu, Aishwarya Balwani</div>
+<div class="meta-line">Venue: AAAI 2026</div>
+<div class="meta-line">First: 2026-07-28T17:42:42+00:00 · Latest: 2026-11-10T03:25:11+00:00</div>
+<div class="meta-line">Comments: Second Workshop on XAI4Science, AAAI 2026</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2607.26119v2">Abs</a> · <a href="https://arxiv.org/pdf/2607.26119v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Large language models trained with reinforcement learning (RL) to reason step by step have been increasingly shown to outperform their supervised fine-tuned (SFT) counterparts on mathematical reasoning tasks. Yet the mechanistic basis for this improvement remains unclear. We therefore ask, what internal representational differences enable RL-trained reasoning language models to reason better? Our work presents two primary lines of evidence: First, layer-wise linear probes tend to predict answer correctness more accurately in RL-trained reasoning language models than in instruction-tuned models on synthetic math problems, although output length alone matches the DeepSeek-Math-RL probe on two templates. Second, mean ablation studies suggest that accuracy drop rises with layer depth in DeepSeek-Math-RL but not in DeepSeek-Math-Instruct. Finally, we analyse token-count variability across accuracy bins for RL-trained reasoning language models and instruction-tuned models to measure whether token counts vary more on harder problems. Token counts tend to vary more on lower-accuracy problems, although in DeepSeek-Math-Instruct only with truncated responses included. At high accuracy, we observe lower variability in DeepSeek-Math-RL than in DeepSeek-Math-Instruct, and we observe higher variability in Olmo-3-Think than in Olmo-3-Instruct.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Large language models trained with reinforcement learning (RL) to reason step by step have been increasingly shown to outperform their supervised fine-tuned (SFT) counterparts on mathematical reasoning tasks.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Recasting Visual Language Models as EEG Foundation Models for Clinical Neurodiagnostics</div>
+<div class="meta-line">Authors: Xin Zhou, Elena Sergeeva, Nan Bi, Wenyu Song, Lijun Yin, Hao Deng</div>
+<div class="meta-line">First: 2026-11-03T19:30:45+00:00 · Latest: 2026-11-10T01:24:22+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2611.05538v2">Abs</a> · <a href="https://arxiv.org/pdf/2611.05538v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Historically automated electroencephalography (EEG) systems was done using task-specific supervised models trained on purposely annotated data. A more recent modeling paradigm relies on creating a unified representation, or a &#x27;foundation model&#x27;, for multiple modality-specific tasks through large-scale domain-specific pretraining on the unannotated EEG signal. The quality of this unified representation directly depends on the availability of the modality-specific datasets. At the same time, generalist Vision Language Models (VLMs) exhibit broad few-shot learning capacities as well as good fine-tuning adaptability to different visual and language tasks. Can VLMs learn how to read and interpret EEG visually, emulating to a degree the way human clinicians inspect the EEG patterns? In this work we make a case that they can: we show that generalist VLMs without large-scale EEG pretraining perform competitively across a collection of clinical neuro-diagnostic tasks, can adapt to different tasks in a few-shot learning setting better than specialist foundation models, and exhibit better performance with model scaling when modality-specific models fail to exhibit.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Historically automated electroencephalography (EEG) systems was done using task-specific supervised models trained on purposely annotated data.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">Tracing Moral Foundations in Large Language Models</div>
+<div class="meta-line">Authors: Chenxiao Yu, Bowen Yi, Farzan Karimi-Malekabadi, Suhaib Abdurahman, Jinyi Ye, Shrikanth Narayanan, Yue Zhao, Morteza Dehghani</div>
+<div class="meta-line">First: 2026-01-09T00:09:28+00:00 · Latest: 2026-11-09T23:17:45+00:00</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2601.05437v4">Abs</a> · <a href="https://arxiv.org/pdf/2601.05437v4">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Large language models often produce human-like moral judgments, but it is unclear whether this reflects an internal conceptual structure or superficial ``moral mimicry.&#x27;&#x27; Using Moral Foundations Theory (MFT) as an analytic framework, we study how moral foundations are encoded, organized, and expressed across 14 base and instruction-tuned LLMs spanning four model families (Llama, Qwen2.5, Qwen3-MoE, Mistral) and scales from 7B to 70B. We employ a multi-level approach combining (i) layer-wise analysis of MFT concept representations and their alignment with human moral perceptions, (ii) pretrained sparse autoencoders (SAEs) over the residual stream to identify sparse features that support moral concepts, and (iii) causal steering interventions using dense MFT vectors and sparse SAE features. We find that models represent and distinguish moral foundations in a manner that aligns with human judgments, and that this moral geometry naturally emerges from pretraining and is selectively rewired by post-training. At a finer scale, SAE features show clear semantic links to specific foundations, suggesting partially disentangled mechanisms within shared representations. Finally, steering along either dense vectors or sparse features produces predictable shifts in foundation-relevant behavior, demonstrating a causal connection between internal representations and moral outputs. Together, our results provide mechanistic evidence that moral concepts in LLMs are distributed, layered, and partly disentangled, suggesting that pluralistic moral structure can emerge as a latent pattern from the statistical regularities of language alone.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Large language models often produce human-like moral judgments, but it is unclear whether this reflects an internal conceptual structure or superficial ``moral mimicry.&#x27;&#x27; Using Moral Foundations Theory (MFT) as an analytic framework, we study how moral foundations are encoded, organized, and expressed across 14 base and instruction-tuned LLMs spanning four model families (Llama, Qwen2.5, Qwen3-MoE, Mistral) and scales from 7B to 70B.</div>
+</details>
+</div>
+<div class="card">
+<div class="title">From Architecture to Output: Testing the Structural Origins of Hallucination and the Amplifying Role of Data</div>
+<div class="meta-line">Authors: Md. Rejaul Korim Sadi, Toufiqur Rahman Tasin, Golam Mostofa Naeem</div>
+<div class="meta-line">First: 2026-04-29T11:34:09+00:00 · Latest: 2026-11-09T21:20:10+00:00</div>
+<div class="meta-line">Comments: 16 pages, 4 figures, 4 tables. Substantially revised: adds a matched-architecture study (14 models) and corrected statistics for the prefix-repair study. Data and code in ancillary files</div>
+<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2606.07537v3">Abs</a> · <a href="https://arxiv.org/pdf/2606.07537v3">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
+<details class="detail"><summary>Abstract</summary>
+<div class="mono">Surveys of hallucination classify errors by how an output relates to its source, and often explain them by the model&#x27;s structure: attention retrieves by association, the maximum-likelihood objective has no term for truth, and left-to-right decoding commits to early tokens. Data, on this account, makes these failures worse rather than causing them. The account is usually argued rather than tested. We test it with interventions that need only sampling access. Study 1 holds pretraining data, tokenizer and scale fixed and swaps attention for a state-space mixer, using five Pythia/Mamba pairs from 130M to 2.8B parameters and four further attention models, on 111 facts presented with a planted false or a planted true statement. Swapping the mixer leaves free-recall failure unchanged (both 2.8B models answer 3 of 200 SimpleQA questions), but it changes what happens to a defect in the input. From 410M upwards, every attention model repeats the planted falsehood more often than its matched state-space model (2.8B: 650 vs. 566 of 666 items, p = 2.5e-20), also on facts both models know, while the state-space models can still read planted facts they did not know. Study 2 replaces the first wrong fact in 111 erroneous answers from three instruction-tuned models. The correct fact cuts the share of answers with a downstream error from 92.5% to 48.1%, but a different wrong fact works as well (p = 0.38), and the models give the right answer in isolation on only 2 of 111 items. The structural account survives in a narrower form. The mixing component decides whether a defect in the context becomes an output error, commitment decides how an error spreads, and on long-tail questions the first error comes from missing knowledge, not from a suppressed truth.</div></details>
+<details class="detail"><summary>Summary / 总结</summary>
+<div class="mono">Surveys of hallucination classify errors by how an output relates to its source, and often explain them by the model&#x27;s structure: attention retrieves by association, the maximum-likelihood objective has no term for truth, and left-to-right decoding commits to early tokens.</div>
+</details>
+</div>
+<div class="card">
 <div class="title">Interpretability Is Not Model-Specific</div>
 <div class="meta-line">Authors: Marcus Armstrong, Navid Ayoobi, Pradham Mummaleti, Alexander Chulzhanov, Arjun Mukherjee</div>
 <div class="meta-line">First: 2026-11-09T16:43:26+00:00 · Latest: 2026-11-09T16:43:26+00:00</div>
@@ -315,130 +435,10 @@ summary{cursor:pointer;color:var(--acc)}
 <details class="detail"><summary>Summary / 总结</summary>
 <div class="mono">Small molecules, crystals, and proteins all reduce to atoms in 3D space, yet their generative pipelines remain fragmented across domains, each with its Small molecules, crystals, and proteins all reduce to atoms in 3D space, yet their generative pipelines remain fragmented across domains, each with its own graph, equivariant, or frame-based architecture.</div>
 </details>
-</div>
-<div class="card">
-<div class="title">Full Fine-Tuning is not the Problem: Why Adam Fails and SGD Succeeds in Few-Shot CLIP Adaptation</div>
-<div class="meta-line">Authors: Nairouz Mrabah, Ismail Ben Ayed, Eric Granger</div>
-<div class="meta-line">Venue: NeurIPS 2026</div>
-<div class="meta-line">First: 2026-11-08T05:47:19+00:00 · Latest: 2026-11-08T05:47:19+00:00</div>
-<div class="meta-line">Comments: Accepted at NeurIPS 2026</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2611.11152v1">Abs</a> · <a href="https://arxiv.org/pdf/2611.11152v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Few-shot CLIP adaptation is often treated as a parameterization problem. Full fine-tuning is assumed to overfit, so parameter-efficient fine-tuning (PEFT) methods are preferred. In this paper, we show that this conclusion conflates parameterization with optimization. Across 11 datasets, 3 CLIP backbones, and 5 shot levels, dense full fine-tuning with plain SGD outperforms representative PEFT methods under the reported evaluation protocol, whereas Adam/AdamW collapses. We trace this collapse to unreliable support-set preconditioning. The few-shot second moment systematically underestimates the corresponding full-data statistic, already at initialization. Adam&#x27;s inverse-square-root normalization converts this error into an oversized adaptive update. Matching Adam&#x27;s first-step update budget to SGD resolves most of the collapse, whereas numerator-side alignment does not explain the failure. Shampoo and SOAP also fail, so richer preconditioning alone does not resolve the problem. Theory formalizes how few-shot estimation error is amplified into unsafe updates. SGD succeeds because it avoids unreliable preconditioners and stays close to pretrained CLIP. Interpolation probes show low-loss connections along tested directions, and curvature probes show favorable directional curvature. These results identify optimizer-induced preconditioning, not dense full fine-tuning itself, as the main source of failure in few-shot CLIP adaptation.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Few-shot CLIP adaptation is often treated as a parameterization problem.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">MOSAIC: Efficient Mixture-of-Agent Scheduling via Adaptive Aggregation and Inference Concurrency</div>
-<div class="meta-line">Authors: Saptarshi Mitra, Yifan Zhang, Rachid Karami, Sreetama Sarkar, Phyo Pyae Moe Aung, Nazmul Takbir, Souvik Kundu, Sitao Huang</div>
-<div class="meta-line">First: 2026-06-02T01:40:33+00:00 · Latest: 2026-11-08T05:38:36+00:00</div>
-<div class="meta-line">Comments: 13 pages, 8 main pages</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2606.03014v2">Abs</a> · <a href="https://arxiv.org/pdf/2606.03014v2">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Mixture-of-Agents (MoA) systems improve reasoning accuracy by routing each query to multiple expert LLMs and aggregating their outputs. Efficiently executing this workload on limited GPU resources has bottlenecks. Skill-based routing creates skewed expert demand, and combining instruction-tuned LLMs with long-reasoning models results in extreme variability in generation lengths. Consequently, traditional scheduling strategies suffer from significant GPU idling and throughput collapse due to load imbalances. We present MOSAIC, a scheduling framework for accelerating batch-oriented MoA workloads. MOSAIC uses two-stage workload-aware scheduling: an expert placement stage, where an integer linear program (ILP) decides expert placement, followed by a query-sequencing stage that schedules requests based on predicted output lengths. Additionally, MOSAIC uses confidence-aware adaptive aggregation, leveraging inter-expert agreement to bypass the heavy aggregator LLM for consensus queries. On a 4-GPU system, MOSAIC achieves 2.7-3.4x end-to-end speedups over round-robin scheduling and reduces the mean time-to-answer by 3.9-7.8x, while matching accuracy within +/-1pp.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Mixture-of-Agents (MoA) systems improve reasoning accuracy by routing each query to multiple expert LLMs and aggregating their outputs.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Learn-To-Learn on Arbitrary Textual Conditioning: A Hypernetwork-Driven Meta-Gated LLM</div>
-<div class="meta-line">Authors: Luo Ji, Qi Qin, Ningyuan Xi, Teng Chen, Qingqing Gu, Hongyan Li</div>
-<div class="meta-line">First: 2026-05-03T17:13:45+00:00 · Latest: 2026-11-07T19:10:13+00:00</div>
-<div class="meta-line">Comments: 33 pages, 16 figures. ICML2026</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2605.01973v4">Abs</a> · <a href="https://arxiv.org/pdf/2605.01973v4">PDF</a> · <a href="https://github.com/AaronJi/MeGan">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Conventional LLMs may suffer from corpus heterogeneity and subtle condition changes. While finetuning can create the catastrophe forgetting issue, application of meta-learning on LLMs is also limited due to its complexity and scalability. In this paper, we activate the meta-signal of $β$ within the SwiGLU blocks, resulting in a meta-gating mechanism that adaptively adjusts the nonlinearity of FFN. A hypernetwork is employed which dynamically produces $β$ on textual conditions, providing meta-controllability on LLMs. By testing on different condition types such as task, domain, persona, and style, our method outperforms finetuning and meta-learning baselines, and can generalize reasonably on unseen tasks, condition types, or instructions. Our code can be found in https://github.com/AaronJi/MeGan.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Conventional LLMs may suffer from corpus heterogeneity and subtle condition changes.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Pole or Vector? Encoders Capture Bangla Compound Verbs, but LLMs Read Them Literally</div>
-<div class="meta-line">Authors: Md. Asaduzzaman Shuvo, Md Mehrab Karim Antor, Md. Adnanul Islam, Shahanur Rahman Bappy, Sajid Ahamed, Mahfuz Hasan Reza, Md Delwar Shahadat Deepu</div>
-<div class="meta-line">First: 2026-11-07T18:57:46+00:00 · Latest: 2026-11-07T18:57:46+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2611.10909v1">Abs</a> · <a href="https://arxiv.org/pdf/2611.10909v1">PDF</a> · <a href="https://github.com/ashuvo25/Pole_OR_Vector">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">In Bangla, a main verb is often followed by one of a small set of vector verbs. These verbs lose their own meaning and add a shade of meaning instead, such as completion. For example, likhe phello means that someone finished writing, not that they wrote and threw something. The same two verbs can also describe two separate events, so only the context shows which meaning is meant. This makes compound verbs a hard test of how language models handle multiword expressions. We present BanglaCV-Probe, a benchmark of 17 vector verbs with 1,044 minimal pairs, 204 entailment items and 197 pairs of correct and incorrect combinations, all checked by native speakers. We test 26 models (encoders, LLMs and translation systems) on four skills: telling the two meanings apart internally, understanding what a vector adds, preferring correct combinations and keeping the vector&#x27;s meaning in translation. Probes on five encoders tell the two meanings apart and still reach up to 93% accuracy when trained on pairs without surface cues. Prompted models rarely use this knowledge. Entailment accuracy stays between 59% and 81%. Several LLMs answer Yes or No to almost every item, and nine of ten models miss that someone who ate up the rice left none. Most instruction-tuned LLMs translate vectors literally in 15-20% of vector sentences and in up to 55% for mora (die). On correct combinations, a small Bangla-only model (88%) matches BLOOM-7B1 (87%) and both beat Qwen2.5-7B (74%). Data and code: https://github.com/ashuvo25/Pole_OR_Vector</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">In Bangla, a main verb is often followed by one of a small set of vector verbs.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Adapting Large Language Models via Multi-Task Learning for Mental Health Problem, Emotion, and Sentiment Detection</div>
-<div class="meta-line">Authors: Amir Rafiq Bhat, Rahim Dehkharghani, Zeki Erdem</div>
-<div class="meta-line">First: 2026-11-07T15:22:14+00:00 · Latest: 2026-11-07T15:22:14+00:00</div>
-<div class="meta-line">Comments: 33 pages</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2611.10797v1">Abs</a> · <a href="https://arxiv.org/pdf/2611.10797v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">This study investigates sequential multi-task learning using Parameter-Efficient Fine-Tuning (PEFT), LoRA, and 4-bit quantization on Llama 3.1 8B Instruct for mental health problem detection, emotion detection, and sentiment analysis. Using 4,243 English social media posts, it compares two task sequences and demonstrates that task ordering significantly affects knowledge transfer and task interference. The MHP-first sequence achieves the best mental health problem detection (Micro-F1: 0.7624), while the Emotion-first sequence performs better in emotion (F1: 0.6052) and sentiment analysis (F1: 0.9459). A Joint-MTL baseline further highlights the challenges of simultaneous learning, including task interference and generative format collapse. Overall, the findings demonstrate the effectiveness of sequential PEFT for mental health NLP while showing that task order is critical to balancing performance across related tasks. The integration of LoRA and 4-bit quantization also reduces computational and memory requirements, supporting the adaptation of large language models in resource-constrained environments.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">This study investigates sequential multi-task learning using Parameter-Efficient Fine-Tuning (PEFT), LoRA, and 4-bit quantization on Llama 3.1 8B Instruct for mental health problem detection, emotion detection, and sentiment analysis.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">MIRAGE: Mobile Agents with Implicit Reasoning and Generative World Models</div>
-<div class="meta-line">Authors: Zhichao Yang, Yuanze Hu, Haojie Hao, Longkun Hao, Dongshuo Huang, Hongyu Lin, Gen Li, Lanqing Hong, Yihang Lou, Yan Bai</div>
-<div class="meta-line">First: 2026-06-03T09:01:24+00:00 · Latest: 2026-11-07T12:56:29+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2606.04627v3">Abs</a> · <a href="https://arxiv.org/pdf/2606.04627v3">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Mobile agents are increasingly expected to operate everyday applications from screenshots and language goals, where reliable control requires reasoning over screen affordances, multi-step navigation, and future state changes. However, many agents externalize this computation as long textual chains of thought, which slows interaction, increases supervision cost, and complicates deployment. We introduce MIRAGE, a framework that learns continuous latent reasoning representations from visible textual reasoning traces. MIRAGE transfers explicit reasoning into compact hidden states, enabling the agent to reason internally without decoding long rationales. It also incorporates a generative world-model objective: latent reasoning vectors are aligned with future screenshots, encouraging the agent to anticipate upcoming interface states before acting. This turns hidden computation into both a compressed thought representation and a forward-looking model of environment dynamics. At inference time, MIRAGE reasons in continuous latent space, reducing token generation while improving execution efficiency. On AndroidWorld, MIRAGE matches explicit chain-of-thought supervised fine-tuning in the 4B ablation with a 3-5x lower decoded-token budget and improves a comparable instruction-tuned baseline by 10.2 points; on AndroidControl, it improves action grounding while generating over 75% fewer tokens.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Mobile agents are increasingly expected to operate everyday applications from screenshots and language goals, where reliable control requires reasoning over screen affordances, multi-step navigation, and future state changes.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">Audit Before You Merge: Provenance, Probing, and Continual LoRA Composition</div>
-<div class="meta-line">Authors: Lenny Aharon, Neta Glazer, Lior Aharon</div>
-<div class="meta-line">Venue: ICML 2026</div>
-<div class="meta-line">First: 2026-11-07T12:08:10+00:00 · Latest: 2026-11-07T12:08:10+00:00</div>
-<div class="meta-line">Comments: 16 pages, 4 figures, 17 tables. ICML 2026 Workshop on Continual Adaptation at Scale (CATS). Code: https://github.com/LennyAharon/audit_continual_learning</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2611.10684v1">Abs</a> · <a href="https://arxiv.org/pdf/2611.10684v1">PDF</a> · <a href="https://github.com/LennyAharon/audit_continual_learning">Code1</a> · <a href="https://huggingface.co/huggingface">Code2</a> · <a href="https://huggingface.co/docs/hub/spaces">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Post-hoc merging of public LoRA adapters is an attractive gradient-free path to continual adaptation, but reliable measurement of catastrophic forgetting in this setting depends on infrastructure that prior work has not addressed. We treat each adapter merge as a sequential task in a continual-learning setting, with the instruction-tuned base model&#x27;s capabilities as Task 0, and study forgetting on Llama-3.1-8B-Instruct. Public adapter hubs contain modules that fail basic provenance checks: silent base-version mismatches and near-zero delta norms whose inclusion inflates measured interference by ~10pp. We propose a two-check audit (base-model match, non-trivial delta norm) and a leakage-free probing protocol as preconditions for any forgetting study in this setting. On an audited 4-adapter set, naive merging causes -10.5pp on GSM8K and -18.3pp on HumanEval, while Task Arithmetic at lambda=0.5 sits within a standard error of the unmerged baseline. A coordinate search including negative coefficients identifies the math adapter as probe-optimal at lambda=-0.5, outside the reach of positive-only mergers, suggesting forgetting has structure that negation-aware merging may exploit. The same protocol replicates on Mistral-7B-Instruct-v0.3, where 2 of 4 candidate adapters fail the audit and the audited merge reproduces the same merge-method ranking on GSM8K, supporting that our findings are not Llama-specific.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Post-hoc merging of public LoRA adapters is an attractive gradient-free path to continual adaptation, but reliable measurement of catastrophic forgetting in this setting depends on infrastructure that prior work has not addressed.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">CONSTRAINER: Promptable Graph-Structured Optimization via Constraint Conditioning</div>
-<div class="meta-line">Authors: Zeeshan Memon, Mingke Tian, Xinyuan Song, Hongwei Jin, Kibaek Kim, Liang Zhao</div>
-<div class="meta-line">First: 2026-11-07T10:07:40+00:00 · Latest: 2026-11-07T10:07:40+00:00</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2611.10627v1">Abs</a> · <a href="https://arxiv.org/pdf/2611.10627v1">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Neural methods for graph-structured optimization have achieved strong performance within individual problem classes, but are typically trained for fixed formulations, limiting reuse across related problem variants. Recent progress in foundation models has motivated shared neural backbones trained across multiple graph-structured optimization tasks; however, existing approaches primarily share instance-level representations while treating feasibility constraints implicitly. A key source of shared structure across constrained optimization problems is the constraint set itself, which often exhibits substantial overlap across tasks. We propose CONSTRAINER, a constraint-conditioned framework for graph-structured optimization that treats constraints as structured inputs. Constraint specifications are parsed into operator graphs and encoded using a graph neural network to produce invariant constraint embeddings, which condition a shared backbone model for solution prediction. We evaluate our approach on power grid optimization and mixed-integer linear programming problems, where it shows improved solution optimality and enables efficient transfer learning and generalization compared to baseline methods.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Neural methods for graph-structured optimization have achieved strong performance within individual problem classes, but are typically trained for fixed formulations, limiting reuse across related problem variants.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">LEMON-ZEST: Evolution-Informed Tokenization for Efficient Protein Language Modeling</div>
-<div class="meta-line">Authors: Biswajit Banerjee, Claudia Alvarez Carreno, Anton S. Petrov</div>
-<div class="meta-line">Venue: NeurIPS 2026</div>
-<div class="meta-line">First: 2026-09-29T14:27:24+00:00 · Latest: 2026-11-07T08:29:12+00:00</div>
-<div class="meta-line">Comments: Accepted to the 40th Annual Conference on Neural Information Processing Systems (NeurIPS 2026). Camera-ready version</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2609.37675v2">Abs</a> · <a href="https://arxiv.org/pdf/2609.37675v2">PDF</a> · <a href="https://github.com/LDWLab/ZEST}{github.com/LDWLab/ZEST">Code1</a> · <a href="https://github.com/LDWLab/ZEST">Code2</a> · <a href="http://github.com/LDWLab/ZEST">Code3</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Protein Language Models (PLMs) have made remarkable progress following scaling laws established in natural language processing across sequence- and structure-based tasks, yet the potential of tokenization remains underexploited. Unlike human language, proteins preserve structure despite extensive sequence variation, a property standard tokenization strategies fundamentally fail to capture. We introduce ZEST (Zoned Encoding of Sequence Traits), an evolution-informed vocabulary derived from conserved regions of multiple sequence alignments. ZEST allows embedding domain-level biological priors directly at the tokenization stage rather than learning them implicitly through scale. ZEST natively compresses sequences to an average token length of 3.3 residues, enabling our model to process $\geq3380$ residues within a standard 1024-token context window. Building on this, we present LEMON (Layered Extraction of Molecular Ordering from Nature), a compact 200M-parameter sequence-based model for detection of remote homology between protein sequences trained on a single H100 GPU for one week. Despite its modest size, LEMON outperforms models of 600M to 3B parameters and is on-par with TM-Vec. Our results demonstrate that evolution-informed tokenization can substitute for massive parameter scaling, opening a new direction for efficient, biologically-grounded protein representation learning. All code and model weights are publicly available (at \href{https://github.com/LDWLab/ZEST}{github.com/LDWLab/ZEST}) under the MIT license.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Protein Language Models (PLMs) have made remarkable progress following scaling laws established in natural language processing across sequence- and structure-based tasks, yet the potential of tokenization remains underexploited.</div>
-</details>
-</div>
-<div class="card">
-<div class="title">RAPTOR: Ridge-Adaptive Logistic Probes</div>
-<div class="meta-line">Authors: Ziqi Gao, Yaotian Zhu, Qingcheng Zeng, Xu Zhao, Ziqing Wang, Feng Ruan, Kaize Ding</div>
-<div class="meta-line">Venue: NeurIPS 2026</div>
-<div class="meta-line">First: 2026-01-29T19:20:27+00:00 · Latest: 2026-11-07T07:24:53+00:00</div>
-<div class="meta-line">Comments: Accepted at NeurIPS 2026. Camera-ready version</div>
-<div class="links" style="margin-top:8px"><a href="https://arxiv.org/abs/2602.00158v4">Abs</a> · <a href="https://arxiv.org/pdf/2602.00158v4">PDF</a> · <a href="https://huggingface.co/huggingface">Code1</a> · <a href="https://huggingface.co/docs/hub/spaces">Code2</a></div>
-<details class="detail"><summary>Abstract</summary>
-<div class="mono">Probing studies what information is encoded in a frozen LLM&#x27;s layer representations by training a lightweight predictor on top of them. Beyond analysis, probes are often used operationally in probe-then-steer pipelines: a learned concept vector is extracted from a probe and injected via additive activation steering by adding it to a layer representation during the forward pass. The effectiveness of this pipeline hinges on estimating concept vectors that are accurate, directionally stable under ablation, and inexpensive to obtain. Motivated by these desiderata, we propose RAPTOR (Ridge-Adaptive Logistic Probe), a simple L2-regularized logistic probe whose validation-tuned ridge strength yields concept vectors from normalized weights. Across extensive experiments on instruction-tuned LLMs and human-written concept datasets, RAPTOR matches or exceeds strong baselines in accuracy while achieving competitive directional stability and substantially lower training cost; these quantitative results are supported by qualitative downstream steering demonstrations. Finally, using the Convex Gaussian Min-max Theorem (CGMT), we provide a mechanistic characterization of ridge logistic regression in an idealized Gaussian teacher-student model in the high-dimensional few-shot regime, explaining how penalty strength mediates probe accuracy and concept-vector stability and yielding structural predictions that qualitatively align with trends observed on real LLM embeddings.</div></details>
-<details class="detail"><summary>Summary / 总结</summary>
-<div class="mono">Probing studies what information is encoded in a frozen LLM&#x27;s layer representations by training a lightweight predictor on top of them.</div>
-</details>
 </div></div>
     <details style="margin-top:16px" class="detail"><summary>History</summary>
-      <div class="history-list"><a href="archive/20261110_0948.html">20261110_0948</a>
+      <div class="history-list"><a href="archive/20261111_0750.html">20261111_0750</a>
+<a href="archive/20261110_0948.html">20261110_0948</a>
 <a href="archive/20261109_0636.html">20261109_0636</a>
 <a href="archive/20261108_0626.html">20261108_0626</a>
 <a href="archive/20261107_0735.html">20261107_0735</a>
